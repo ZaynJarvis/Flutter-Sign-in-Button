@@ -6,3 +6,8 @@
 
 - fix change log
 - update example pubspec
+
+## 0.1.2
+
+- delete image from root
+- use image from pinterest
