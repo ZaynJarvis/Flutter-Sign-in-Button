@@ -11,3 +11,7 @@
 
 - delete image from root
 - use image from pinterest
+
+## 0.1.3
+
+- change full example readme to example folder
