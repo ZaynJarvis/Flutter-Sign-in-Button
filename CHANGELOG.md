@@ -15,3 +15,4 @@
 ## 0.1.3
 
 - change full example readme to example folder
+- update lisense
