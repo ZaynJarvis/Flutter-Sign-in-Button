@@ -9,8 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_signin_button:
-    path: ../
+  flutter_signin_button: any
 
   cupertino_icons: ^0.1.2
 
