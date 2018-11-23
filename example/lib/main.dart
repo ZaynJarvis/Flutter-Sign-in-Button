@@ -29,7 +29,12 @@ class LoginPage extends StatelessWidget {
               icon: Icons.email,
               onPressed: () {},
               backgroundColor: Colors.blueGrey[700],
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(10.0)),
+              ),
+              width: 200.0,
             ),
+            Divider(),
             SignInButton(
               Buttons.Google,
               onPressed: () {},
