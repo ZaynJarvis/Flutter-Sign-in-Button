@@ -16,3 +16,11 @@
 
 - change full example readme to example folder
 - update lisense
+
+## 0.2.0
+
+- add customizable shape # encountering issues here. currently not responsible
+- add customizable width
+- update lisense
+- delete cupercino icons dependency
+- refactor code

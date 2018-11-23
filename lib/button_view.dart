@@ -1,90 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-enum Buttons {
-  Email,
-  Google,
-  Facebook,
-  GitHub,
-  LinkedIn,
-  Pinterest,
-  Tumblr,
-}
-
-@immutable
-class SignInButtonBuilder extends StatelessWidget {
-  final String title;
-  final IconData icon;
-  final Color textColor, backgroundColor;
-  final Function onPressed;
-  final EdgeInsets padding;
-  final bool mini;
-  final double elevation;
-
-  SignInButtonBuilder({
-    @required this.icon,
-    @required this.backgroundColor,
-    @required this.onPressed,
-    this.title = '',
-    this.textColor = Colors.white,
-    this.padding = const EdgeInsets.all(3.0),
-    this.mini = false,
-    this.elevation = 2.0,
-  })  : assert(title != null),
-        assert(icon != null),
-        assert(textColor != null),
-        assert(backgroundColor != null),
-        assert(onPressed != null),
-        assert(mini != null),
-        assert(elevation != null);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialButton(
-      minWidth: mini ? 35.0 : null,
-      elevation: elevation,
-      padding: padding,
-      color: backgroundColor,
-      onPressed: onPressed,
-      child: mini
-          ? Container(
-              width: 35.0,
-              height: 35.0,
-              child: Icon(
-                icon,
-                color: Colors.white,
-              ),
-            )
-          : Container(
-              constraints: BoxConstraints(
-                maxWidth: MediaQuery.of(context).size.width / 1.5,
-              ),
-              child: Center(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: MediaQuery.of(context).size.width / 20),
-                      child: Icon(
-                        icon,
-                        color: Colors.white,
-                      ),
-                    ),
-                    Text(
-                      "Sign in with $title",
-                      style: TextStyle(
-                        fontFamily: 'Roboto',
-                        color: textColor,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-    );
-  }
-}
+import 'package:flutter_signin_button/button_builder.dart';
+import 'package:flutter_signin_button/button_list.dart';
 
 class SignInButton extends StatelessWidget {
   final Function onPressed;
@@ -99,6 +17,7 @@ class SignInButton extends StatelessWidget {
     switch (button) {
       case Buttons.Email:
         return SignInButtonBuilder(
+          key: ValueKey("Email"),
           title: 'Email',
           icon: Icons.email,
           onPressed: () {},
@@ -106,6 +25,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Google:
         return SignInButtonBuilder(
+          key: ValueKey("Google"),
           mini: mini,
           title: 'Google',
           icon: FontAwesomeIcons.google,
@@ -114,6 +34,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Facebook:
         return SignInButtonBuilder(
+          key: ValueKey("Facebook"),
           mini: mini,
           title: 'Facebook',
           icon: FontAwesomeIcons.facebookF,
@@ -122,6 +43,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.GitHub:
         return SignInButtonBuilder(
+          key: ValueKey("GitHub"),
           mini: mini,
           title: 'GitHub',
           icon: FontAwesomeIcons.github,
@@ -130,6 +52,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.LinkedIn:
         return SignInButtonBuilder(
+          key: ValueKey("LinkedIn"),
           mini: mini,
           title: 'LinkedIn',
           icon: FontAwesomeIcons.linkedinIn,
@@ -138,6 +61,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Pinterest:
         return SignInButtonBuilder(
+          key: ValueKey("Pinterest"),
           mini: mini,
           title: 'Pinterest',
           icon: FontAwesomeIcons.pinterest,
@@ -146,6 +70,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Tumblr:
         return SignInButtonBuilder(
+          key: ValueKey("Tumblr"),
           mini: mini,
           title: 'Tumblr',
           icon: FontAwesomeIcons.tumblr,
@@ -154,6 +79,7 @@ class SignInButton extends StatelessWidget {
         );
       default:
         return SignInButtonBuilder(
+          key: ValueKey("Email"),
           title: 'Email',
           icon: Icons.email,
           onPressed: () {},
