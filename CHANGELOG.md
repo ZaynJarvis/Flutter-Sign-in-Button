@@ -24,3 +24,7 @@
 - update lisense
 - delete cupercino icons dependency
 - refactor code
+
+## 0.2.1
+
+- Update MIT license
