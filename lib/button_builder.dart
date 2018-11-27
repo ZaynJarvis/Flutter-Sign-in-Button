@@ -2,16 +2,40 @@ import 'package:flutter/material.dart';
 
 @immutable
 class SignInButtonBuilder extends StatelessWidget {
-  final String title;
+  /// This is a builder class for signin button
+  ///
+  /// Icon can be used to define the signin method
+  /// User can use Flutter built-in Icons or font-awesome flutter's Icon
   final IconData icon;
-  final Color textColor, backgroundColor;
-  final Function onPressed;
-  final EdgeInsets padding;
-  final ShapeBorder shape;
+
+  /// `mini` tag is used to switch from a full-width signin button to
   final bool mini;
+
+  /// a square button with only icon itself.
+  /// and hence the title tag is optional.
+  final String title;
+
+  /// backgroundColor is required but textColor is default to `Colors.white`
+  final Color textColor, backgroundColor;
+
+  /// onPressed should be specified as a required field to indicate the callback.
+  final Function onPressed;
+
+  /// padding is default to `EdgeInsets.all(3.0)`
+  final EdgeInsets padding;
+
+  /// shape is to specify the custom shape of the widget.
+  /// To make this applicable, currenly, should merge `#6923`.
+  /// It's a bug fix on `clipBehavior`
+  final ShapeBorder shape;
+
+  /// elevation has defalt value of 2.0
   final double elevation;
+
+  /// width is default to be 1/1.5 of the screen
   final double width;
 
+  /// The constructor is self-explanatory.
   SignInButtonBuilder({
     Key key,
     @required this.icon,
@@ -32,6 +56,7 @@ class SignInButtonBuilder extends StatelessWidget {
         assert(mini != null),
         assert(elevation != null);
 
+  /// The build funtion will be help user to build the signin button widget.
   @override
   Widget build(BuildContext context) {
     return MaterialButton(

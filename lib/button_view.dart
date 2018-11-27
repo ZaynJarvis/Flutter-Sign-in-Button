@@ -5,13 +5,29 @@ import 'package:flutter_signin_button/button_builder.dart';
 import 'package:flutter_signin_button/button_list.dart';
 
 class SignInButton extends StatelessWidget {
+  /// Here are the buttons builder which integrate with button builder
+  /// and the buttons list.
+  ///
+  /// The `SignInButton` class already contains general used buttons.
+  /// In case of other buttons, user can always use `SignInButtonBuilder`
+  /// to build the signin button.
+
+  /// onPressed function should be passed in as a required field.
   final Function onPressed;
+
+  /// button should be used from the enum class `Buttons`
   final Buttons button;
+
+  /// mini is a boolean field which specify whether to use a square mini button.
   final bool mini;
+
+  /// The constructor is fairly self-explanatory.
   SignInButton(this.button, {@required this.onPressed, this.mini = false})
       : assert(button != null),
         assert(onPressed != null);
 
+  /// The build funtion is used to build the widget which will switch to
+  /// desired widget based on the enum class `Buttons`
   @override
   Widget build(BuildContext context) {
     switch (button) {

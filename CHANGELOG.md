@@ -28,3 +28,7 @@
 ## 0.2.1
 
 - Update MIT license
+
+## 0.2.2
+
+- Update documentation of the library.

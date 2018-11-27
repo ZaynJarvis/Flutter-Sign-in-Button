@@ -9,7 +9,7 @@ Add to pubspec.yaml.
 ```yaml
 dependencies:
   ...
-  flutter_signin_button: ^0.2.1
+  flutter_signin_button: ^0.2.2
 ```
 
 ## Usage Example
