@@ -66,7 +66,7 @@ class SignInPage extends StatelessWidget {
                   onPressed: () {},
                 ),
                 SignInButtonBuilder(
-                  icon: Icons.account_balance,
+                  icon: Icons.email,
                   mini: true,
                   onPressed: () {},
                   backgroundColor: Colors.cyan,
