@@ -16,7 +16,8 @@ class SignInButtonBuilder extends StatelessWidget {
   final String title;
 
   /// backgroundColor is required but textColor is default to `Colors.white`
-  final Color textColor, backgroundColor;
+  /// splashColor is defalt to `Colors.white30`
+  final Color textColor, backgroundColor, splashColor;
 
   /// onPressed should be specified as a required field to indicate the callback.
   final Function onPressed;
@@ -25,9 +26,9 @@ class SignInButtonBuilder extends StatelessWidget {
   final EdgeInsets padding;
 
   /// shape is to specify the custom shape of the widget.
-  /// To make this applicable, currenly, should merge `#6923`.
-  /// It's a bug fix on `clipBehavior`
-  final ShapeBorder shape;
+  /// However the flutter widgets contains restriction or bug
+  /// on material button, hence, comment out.
+  // final ShapeBorder shape;
 
   /// elevation has defalt value of 2.0
   final double elevation;
@@ -43,10 +44,10 @@ class SignInButtonBuilder extends StatelessWidget {
     @required this.onPressed,
     this.title = '',
     this.textColor = Colors.white,
+    this.splashColor = Colors.white30,
     this.padding = const EdgeInsets.all(3.0),
     this.mini = false,
     this.elevation = 2.0,
-    this.shape = null,
     this.width = null,
   })  : assert(title != null),
         assert(icon != null),
@@ -66,8 +67,7 @@ class SignInButtonBuilder extends StatelessWidget {
       padding: padding,
       color: backgroundColor,
       onPressed: onPressed,
-      splashColor: Colors.red,
-      shape: shape,
+      splashColor: splashColor,
       child: mini
           ? Container(
               width: 35.0,

@@ -32,3 +32,9 @@
 ## 0.2.2
 
 - Update documentation of the library.
+
+## 0.2.3
+
+- Delete shape field since Flutter constraint
+- Change defalt splash color
+- provide user defined splash color in ButtonBuilder Widget
