@@ -15,6 +15,9 @@ class SignInButtonBuilder extends StatelessWidget {
   /// and hence the title tag is optional.
   final String title;
 
+  /// Localize the text on the button
+  final String signInText;
+
   /// backgroundColor is required but textColor is default to `Colors.white`
   final Color textColor, backgroundColor;
 
@@ -42,6 +45,7 @@ class SignInButtonBuilder extends StatelessWidget {
     @required this.backgroundColor,
     @required this.onPressed,
     this.title = '',
+    this.signInText = 'Sign in with',
     this.textColor = Colors.white,
     this.padding = const EdgeInsets.all(3.0),
     this.mini = false,
@@ -94,7 +98,7 @@ class SignInButtonBuilder extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Sign in with $title",
+                      "$signInText $title",
                       style: TextStyle(
                         fontFamily: 'Roboto',
                         color: textColor,

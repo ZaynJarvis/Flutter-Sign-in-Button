@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import 'package:flutter_signin_button/button_builder.dart';
 import 'package:flutter_signin_button/button_list.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignInButton extends StatelessWidget {
   /// Here are the buttons builder which integrate with button builder
@@ -36,7 +35,7 @@ class SignInButton extends StatelessWidget {
           key: ValueKey("Email"),
           title: 'Email',
           icon: Icons.email,
-          onPressed: () {},
+          onPressed: onPressed,
           backgroundColor: Colors.grey[700],
         );
       case Buttons.Google:

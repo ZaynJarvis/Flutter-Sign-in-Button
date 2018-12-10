@@ -32,6 +32,7 @@ class SignInPage extends StatelessWidget {
               icon: Icons.email,
               onPressed: () {},
               backgroundColor: Colors.blueGrey[700],
+              signInText: "Get going with",
               width: 200.0,
             ),
             Divider(),
