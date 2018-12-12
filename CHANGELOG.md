@@ -38,3 +38,8 @@
 - Delete shape field since Flutter constraint
 - Change defalt splash color
 - provide user defined splash color in ButtonBuilder Widget
+
+## 0.2.3
+
+- Fix the bug on email signin button @matthiasbruns
+- Add user configured signin text @matthiasbruns
