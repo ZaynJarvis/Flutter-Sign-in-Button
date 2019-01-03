@@ -47,6 +47,16 @@ class SignInButton extends StatelessWidget {
           backgroundColor: Color(0xFFDD4B39),
           onPressed: onPressed,
         );
+      case Buttons.GoogleDark:
+        return SignInButtonBuilder(
+          key: ValueKey("Google"),
+          mini: mini,
+          title: 'Google',
+          icon: FontAwesomeIcons.google,
+          backgroundColor: Color(0xFF4285F4),
+          textColor: Color(0xFFFFFFFF),
+          onPressed: onPressed,
+        );
       case Buttons.Facebook:
         return SignInButtonBuilder(
           key: ValueKey("Facebook"),
