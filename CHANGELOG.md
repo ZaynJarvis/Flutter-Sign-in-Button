@@ -39,7 +39,12 @@
 - Change defalt splash color
 - provide user defined splash color in ButtonBuilder Widget
 
-## 0.2.3
+## 0.2.4
 
 - Fix the bug on email signin button @matthiasbruns
 - Add user configured signin text @matthiasbruns
+
+## 0.2.5
+
+- Add Flutter Badge on Github Readme According to [this repo](https://github.com/ZaynJarvis/Flutter-Badge)
+- Add Google Dark button thanks to @g3rrydanc3
