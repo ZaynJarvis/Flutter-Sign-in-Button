@@ -103,6 +103,15 @@ class SignInButton extends StatelessWidget {
           backgroundColor: Color(0xFF34526f),
           onPressed: onPressed,
         );
+      case Buttons.Twitter:
+        return SignInButtonBuilder(
+          key: ValueKey("Twitter"),
+          mini: mini,
+          title: 'Twitter',
+          icon: FontAwesomeIcons.twitter,
+          backgroundColor: Color(0xFF1DA1F2),
+          onPressed: onPressed,
+        );
       default:
         return SignInButtonBuilder(
           key: ValueKey("Email"),

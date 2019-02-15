@@ -52,6 +52,10 @@ class SignInPage extends StatelessWidget {
               Buttons.Pinterest,
               onPressed: () {},
             ),
+            SignInButton(
+              Buttons.Twitter,
+              onPressed: () {},
+            ),
             Divider(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

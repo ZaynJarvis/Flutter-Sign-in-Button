@@ -8,4 +8,5 @@ enum Buttons {
   LinkedIn,
   Pinterest,
   Tumblr,
+  Twitter,
 }
