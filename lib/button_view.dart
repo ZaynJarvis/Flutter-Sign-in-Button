@@ -33,6 +33,7 @@ class SignInButton extends StatelessWidget {
       case Buttons.Email:
         return SignInButtonBuilder(
           key: ValueKey("Email"),
+          mini: mini,
           title: 'Email',
           icon: Icons.email,
           onPressed: onPressed,
