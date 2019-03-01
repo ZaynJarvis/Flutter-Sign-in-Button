@@ -112,6 +112,15 @@ class SignInButton extends StatelessWidget {
           backgroundColor: Color(0xFF1DA1F2),
           onPressed: onPressed,
         );
+      case Buttons.Reddit:
+        return SignInButtonBuilder(
+          key: ValueKey("Reddit"),
+          mini: mini,
+          title: 'Reddit',
+          icon: FontAwesomeIcons.reddit,
+          backgroundColor: Color(0xFF4500F2),
+          onPressed: onPressed,
+        );
       default:
         return SignInButtonBuilder(
           key: ValueKey("Email"),

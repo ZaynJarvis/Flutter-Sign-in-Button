@@ -9,4 +9,5 @@ enum Buttons {
   Pinterest,
   Tumblr,
   Twitter,
+  Reddit
 }
