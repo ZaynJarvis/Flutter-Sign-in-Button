@@ -118,7 +118,7 @@ class SignInButton extends StatelessWidget {
           mini: mini,
           title: 'Reddit',
           icon: FontAwesomeIcons.reddit,
-          backgroundColor: Color(0xFF4500F2),
+          backgroundColor: Color(0xFFFF4500),
           onPressed: onPressed,
         );
       default:
