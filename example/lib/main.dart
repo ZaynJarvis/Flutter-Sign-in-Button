@@ -28,11 +28,10 @@ class SignInPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SignInButtonBuilder(
-              title: 'Email',
+              text: 'Get going with Email',
               icon: Icons.email,
               onPressed: () {},
               backgroundColor: Colors.blueGrey[700],
-              signInText: "Get going with",
               width: 200.0,
             ),
             Divider(),
@@ -50,10 +49,12 @@ class SignInPage extends StatelessWidget {
             ),
             SignInButton(
               Buttons.Pinterest,
+              text: "Sign up with Pinterest",
               onPressed: () {},
             ),
             SignInButton(
               Buttons.Twitter,
+              text: "Use Twitter",
               onPressed: () {},
             ),
             Divider(),
@@ -72,6 +73,7 @@ class SignInPage extends StatelessWidget {
                 ),
                 SignInButtonBuilder(
                   icon: Icons.email,
+                  text: "Ignored for mini button",
                   mini: true,
                   onPressed: () {},
                   backgroundColor: Colors.cyan,
