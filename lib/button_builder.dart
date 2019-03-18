@@ -11,12 +11,8 @@ class SignInButtonBuilder extends StatelessWidget {
   /// `mini` tag is used to switch from a full-width signin button to
   final bool mini;
 
-  /// a square button with only icon itself.
-  /// and hence the title tag is optional.
-  final String title;
-
-  /// Localize the text on the button
-  final String signInText;
+  /// the button's text
+  final String text;
 
   /// backgroundColor is required but textColor is default to `Colors.white`
   /// splashColor is defalt to `Colors.white30`
@@ -45,15 +41,14 @@ class SignInButtonBuilder extends StatelessWidget {
     @required this.icon,
     @required this.backgroundColor,
     @required this.onPressed,
-    this.title = '',
-    this.signInText = 'Sign in with',
+    @required this.text,
     this.textColor = Colors.white,
     this.splashColor = Colors.white30,
     this.padding = const EdgeInsets.all(3.0),
     this.mini = false,
     this.elevation = 2.0,
     this.width = null,
-  })  : assert(title != null),
+  })  : assert(text != null),
         assert(icon != null),
         assert(textColor != null),
         assert(backgroundColor != null),
@@ -90,15 +85,14 @@ class SignInButtonBuilder extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: MediaQuery.of(context).size.width / 20),
+                      padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width / 20),
                       child: Icon(
                         icon,
                         color: Colors.white,
                       ),
                     ),
                     Text(
-                      "$signInText $title",
+                      text,
                       style: TextStyle(
                         fontFamily: 'Roboto',
                         color: textColor,
