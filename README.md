@@ -1,7 +1,7 @@
 A Flutter plugin for iOS and Android for generating signin buttons for different social media account.
 
-[![](https://flutter.zaynjarvis.com/version/flutter_signin_button)](https://pub.dartlang.org/packages/flutter_signin_button)
-[![](https://flutter.zaynjarvis.com/score/flutter_signin_button)](https://pub.dartlang.org/packages/flutter_signin_button)
+[![](http://flutter-badge.zaynjarvis.com/version/flutter_signin_button)](https://pub.dartlang.org/packages/flutter_signin_button)
+[![](http://flutter-badge.zaynjarvis.com/score/flutter_signin_button)](https://pub.dartlang.org/packages/flutter_signin_button)
 
 > Pub version and score badges are created from a third party tool. Go for instruction [here](https://github.com/ZaynJarvis/Flutter-Badge)
 
@@ -48,7 +48,7 @@ SignInButton(
 
 ```dart
 SignInButtonBuilder(
-  title: 'Email',
+  text: 'Sign in with Email',
   icon: Icons.email,
   onPressed: () {},
   backgroundColor: Colors.blueGrey[700],
@@ -66,6 +66,7 @@ enum Buttons {
   LinkedIn,
   Pinterest,
   Tumblr,
+  Twitter
 }
 ```
 
