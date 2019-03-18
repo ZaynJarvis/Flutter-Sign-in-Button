@@ -14,7 +14,7 @@ Add to pubspec.yaml.
 ```yaml
 dependencies:
   ...
-  flutter_signin_button: ^0.2.6
+  flutter_signin_button: ^0.2.7
 ```
 
 ## Usage Example
@@ -48,7 +48,7 @@ SignInButton(
 
 ```dart
 SignInButtonBuilder(
-  title: 'Email',
+  text: 'Sign in with Email',
   icon: Icons.email,
   onPressed: () {},
   backgroundColor: Colors.blueGrey[700],
@@ -66,6 +66,7 @@ enum Buttons {
   LinkedIn,
   Pinterest,
   Tumblr,
+  Twitter
 }
 ```
 
