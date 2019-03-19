@@ -32,6 +32,13 @@ SignInButton(
   Buttons.Google,
   onPressed: () {},
 )
+
+// with custom text
+SignInButton(
+  Buttons.Google,
+  text: "Sign up with Google",
+  onPressed: () {},
+)
 ```
 
 ### For mini buttons.

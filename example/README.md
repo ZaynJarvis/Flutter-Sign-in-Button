@@ -28,7 +28,7 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SignInButtonBuilder(
-              title: 'Email',
+              text: 'Email',
               icon: Icons.email,
               onPressed: () {},
               backgroundColor: Colors.blueGrey[700],
@@ -47,6 +47,7 @@ class LoginPage extends StatelessWidget {
             ),
             SignInButton(
               Buttons.Pinterest,
+              text: "Get started with Pinterest!",
               onPressed: () {},
             ),
             Divider(),
