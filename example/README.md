@@ -7,18 +7,21 @@ import 'package:flutter_signin_button/flutter_signin_button.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  /// This is an example app which make use of
+  /// `SignInButtonBuilder` and `SignInButton` class
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.light(),
-      home: LoginPage(),
+      home: SignInPage(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
 
-class LoginPage extends StatelessWidget {
+class SignInPage extends StatelessWidget {
+  /// Normally the signin buttons should be contained in the SignInPage
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,11 +31,13 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SignInButtonBuilder(
-              text: 'Email',
+              text: 'Get going with Email',
               icon: Icons.email,
               onPressed: () {},
               backgroundColor: Colors.blueGrey[700],
+              width: 200.0,
             ),
+            Divider(),
             SignInButton(
               Buttons.Google,
               onPressed: () {},
@@ -47,7 +52,12 @@ class LoginPage extends StatelessWidget {
             ),
             SignInButton(
               Buttons.Pinterest,
-              text: "Get started with Pinterest!",
+              text: "Sign up with Pinterest",
+              onPressed: () {},
+            ),
+            SignInButton(
+              Buttons.Twitter,
+              text: "Use Twitter",
               onPressed: () {},
             ),
             Divider(),
@@ -65,7 +75,8 @@ class LoginPage extends StatelessWidget {
                   onPressed: () {},
                 ),
                 SignInButtonBuilder(
-                  icon: Icons.account_balance,
+                  icon: Icons.email,
+                  text: "Ignored for mini button",
                   mini: true,
                   onPressed: () {},
                   backgroundColor: Colors.cyan,
@@ -78,4 +89,5 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
+
 ```
