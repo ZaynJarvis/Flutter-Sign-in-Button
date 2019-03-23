@@ -49,7 +49,11 @@
 - Add Flutter Badge on Github Readme According to [this repo](https://github.com/ZaynJarvis/Flutter-Badge)
 - Add Google Dark button thanks to @g3rrydanc3
 
-## 0.2.7
+## 0.2.6
 
 - Add Twitter Button
 - Fix mini for Email
+
+## 0.2.8
+
+- Make text fully customizable thx to @narciero and @LiveLikeCounter
