@@ -27,7 +27,7 @@ class SignInButtonBuilder extends StatelessWidget {
   /// shape is to specify the custom shape of the widget.
   /// However the flutter widgets contains restriction or bug
   /// on material button, hence, comment out.
-  // final ShapeBorder shape;
+  final ShapeBorder shape;
 
   /// elevation has defalt value of 2.0
   final double elevation;
@@ -47,6 +47,7 @@ class SignInButtonBuilder extends StatelessWidget {
     this.padding = const EdgeInsets.all(3.0),
     this.mini = false,
     this.elevation = 2.0,
+    this.shape,
     this.width = null,
   })  : assert(text != null),
         assert(icon != null),
@@ -102,6 +103,7 @@ class SignInButtonBuilder extends StatelessWidget {
                 ),
               ),
             ),
+      shape: shape ?? ButtonTheme.of(context).shape,
     );
   }
 }
