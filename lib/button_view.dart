@@ -110,6 +110,7 @@ class SignInButton extends StatelessWidget {
       default:
         return SignInButtonBuilder(
           key: ValueKey("Email"),
+          mini: mini,
           text: text ?? 'Sign in with Email',
           icon: Icons.email,
           onPressed: onPressed,
