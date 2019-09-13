@@ -57,3 +57,8 @@
 ## 0.2.8
 
 - Make text fully customizable thx to @narciero and @LiveLikeCounter
+
+## 0.3.0
+
+- Add in Shape property
+- Fix mini for email button
