@@ -20,11 +20,14 @@ class SignInButton extends StatelessWidget {
   /// mini is a boolean field which specify whether to use a square mini button.
   final bool mini;
 
+  /// shape is to specify the custom shape of the widget.
+  final ShapeBorder shape;
+
   /// overrides the default button text
   final String text;
 
   /// The constructor is fairly self-explanatory.
-  SignInButton(this.button, {@required this.onPressed, this.mini = false, this.text = null})
+  SignInButton(this.button, {@required this.onPressed, this.mini = false, this.shape = null, this.text = null})
       : assert(button != null),
         assert(onPressed != null);
 
@@ -42,6 +45,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.google,
           backgroundColor: button == Buttons.Google ? Color(0xFFDD4B39) : Color(0xFF4285F4),
           onPressed: onPressed,
+          shape: shape,
         );
       case Buttons.Facebook:
         return SignInButtonBuilder(
@@ -51,6 +55,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.facebookF,
           backgroundColor: Color(0xFF3B5998),
           onPressed: onPressed,
+          shape: shape,
         );
       case Buttons.GitHub:
         return SignInButtonBuilder(
@@ -60,6 +65,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.github,
           backgroundColor: Color(0xFF444444),
           onPressed: onPressed,
+          shape: shape,
         );
       case Buttons.LinkedIn:
         return SignInButtonBuilder(
@@ -69,6 +75,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.linkedinIn,
           backgroundColor: Color(0xFF007BB6),
           onPressed: onPressed,
+          shape: shape,
         );
       case Buttons.Pinterest:
         return SignInButtonBuilder(
@@ -78,6 +85,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.pinterest,
           backgroundColor: Color(0xFFCB2027),
           onPressed: onPressed,
+          shape: shape,
         );
       case Buttons.Tumblr:
         return SignInButtonBuilder(
@@ -87,6 +95,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.tumblr,
           backgroundColor: Color(0xFF34526f),
           onPressed: onPressed,
+          shape: shape,
         );
       case Buttons.Twitter:
         return SignInButtonBuilder(
@@ -96,6 +105,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.twitter,
           backgroundColor: Color(0xFF1DA1F2),
           onPressed: onPressed,
+          shape: shape,
         );
       case Buttons.Reddit:
         return SignInButtonBuilder(
@@ -105,6 +115,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.reddit,
           backgroundColor: Color(0xFFFF4500),
           onPressed: onPressed,
+          shape: shape,
         );
       case Buttons.Email:
       default:
@@ -115,6 +126,7 @@ class SignInButton extends StatelessWidget {
           icon: Icons.email,
           onPressed: onPressed,
           backgroundColor: Colors.grey[700],
+          shape: shape,
         );
     }
   }
