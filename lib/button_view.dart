@@ -48,8 +48,8 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.google,
           backgroundColor: button == Buttons.Google ? Color(0xFFDD4B39) : Color(0xFF4285F4),
           onPressed: onPressed,
-          shape: shape,
           padding: padding,
+          shape: shape,
         );
       case Buttons.Facebook:
         return SignInButtonBuilder(
