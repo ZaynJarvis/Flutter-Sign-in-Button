@@ -16,7 +16,7 @@ class SignInButtonBuilder extends StatelessWidget {
 
   /// backgroundColor is required but textColor is default to `Colors.white`
   /// splashColor is defalt to `Colors.white30`
-  final Color textColor, backgroundColor, splashColor;
+  final Color textColor, iconColor, backgroundColor, splashColor;
 
   /// onPressed should be specified as a required field to indicate the callback.
   final Function onPressed;
@@ -38,16 +38,17 @@ class SignInButtonBuilder extends StatelessWidget {
   /// The constructor is self-explanatory.
   SignInButtonBuilder({
     Key key,
-    @required this.icon,
     @required this.backgroundColor,
+    @required this.icon,
     @required this.onPressed,
     @required this.text,
     this.textColor = Colors.white,
+    this.iconColor = Colors.white,
     this.splashColor = Colors.white30,
     this.padding = const EdgeInsets.all(3.0),
     this.mini = false,
     this.elevation = 2.0,
-    this.shape,
+    this.shape = null,
     this.width = null,
   })  : assert(text != null),
         assert(icon != null),
@@ -74,7 +75,7 @@ class SignInButtonBuilder extends StatelessWidget {
               height: 35.0,
               child: Icon(
                 icon,
-                color: Colors.white,
+                color: this.iconColor,
               ),
             )
           : Container(
@@ -89,7 +90,8 @@ class SignInButtonBuilder extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width / 20),
                       child: Icon(
                         icon,
-                        color: Colors.white,
+                        color: this.iconColor,
+                        size: 18.0,
                       ),
                     ),
                     Text(

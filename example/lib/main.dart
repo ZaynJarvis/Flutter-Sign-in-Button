@@ -32,7 +32,7 @@ class SignInPage extends StatelessWidget {
               icon: Icons.email,
               onPressed: () {},
               backgroundColor: Colors.blueGrey[700],
-              width: 200.0,
+              width: 220.0,
             ),
             Divider(),
             SignInButton(
@@ -44,12 +44,12 @@ class SignInPage extends StatelessWidget {
               onPressed: () {},
             ),
             SignInButton(
-              Buttons.GitHub,
+              Buttons.Apple,
               onPressed: () {},
             ),
             SignInButton(
-              Buttons.Pinterest,
-              text: "Sign up with Pinterest",
+              Buttons.GitHub,
+              text: "Sign up with GitHub",
               onPressed: () {},
             ),
             SignInButton(

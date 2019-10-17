@@ -30,7 +30,14 @@ class SignInButton extends StatelessWidget {
   final EdgeInsets padding;
 
   /// The constructor is fairly self-explanatory.
-  SignInButton(this.button, {@required this.onPressed, this.mini = false, this.shape = null, this.text = null, this.padding = null})
+  SignInButton(this.button,
+      {
+        @required this.onPressed,
+        this.mini = false,
+        this.shape = null,
+        this.text = null,
+        this.padding = const EdgeInsets.all(3.0)
+      })
       : assert(button != null),
         assert(onPressed != null);
 
@@ -69,6 +76,20 @@ class SignInButton extends StatelessWidget {
           text: text ?? 'Sign in with GitHub',
           icon: FontAwesomeIcons.github,
           backgroundColor: Color(0xFF444444),
+          onPressed: onPressed,
+          padding: padding,
+          shape: shape,
+        );
+      case Buttons.Apple:
+      case Buttons.AppleDark:
+        return SignInButtonBuilder(
+          key: ValueKey("Apple"),
+          mini: mini,
+          text: text ?? 'Sign in with Apple',
+          textColor: button == Buttons.Apple ? Colors.black : Colors.white,
+          icon: FontAwesomeIcons.apple,
+          iconColor: button == Buttons.Apple ? Colors.black : Colors.white,
+          backgroundColor: button == Buttons.Apple ? Color(0xFFFFFFFF) : Color(0xFF000000),
           onPressed: onPressed,
           padding: padding,
           shape: shape,

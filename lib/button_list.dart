@@ -5,6 +5,8 @@ enum Buttons {
   GoogleDark,
   Facebook,
   GitHub,
+  Apple,
+  AppleDark,
   LinkedIn,
   Pinterest,
   Tumblr,
