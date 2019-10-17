@@ -26,8 +26,11 @@ class SignInButton extends StatelessWidget {
   /// overrides the default button text
   final String text;
 
+  /// overrides the default button padding
+  final EdgeInsets padding;
+
   /// The constructor is fairly self-explanatory.
-  SignInButton(this.button, {@required this.onPressed, this.mini = false, this.shape = null, this.text = null})
+  SignInButton(this.button, {@required this.onPressed, this.mini = false, this.shape = null, this.text = null, this.padding = null})
       : assert(button != null),
         assert(onPressed != null);
 
@@ -45,6 +48,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.google,
           backgroundColor: button == Buttons.Google ? Color(0xFFDD4B39) : Color(0xFF4285F4),
           onPressed: onPressed,
+          padding: padding,
           shape: shape,
         );
       case Buttons.Facebook:
@@ -55,6 +59,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.facebookF,
           backgroundColor: Color(0xFF3B5998),
           onPressed: onPressed,
+          padding: padding,
           shape: shape,
         );
       case Buttons.GitHub:
@@ -65,6 +70,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.github,
           backgroundColor: Color(0xFF444444),
           onPressed: onPressed,
+          padding: padding,
           shape: shape,
         );
       case Buttons.LinkedIn:
@@ -75,6 +81,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.linkedinIn,
           backgroundColor: Color(0xFF007BB6),
           onPressed: onPressed,
+          padding: padding,
           shape: shape,
         );
       case Buttons.Pinterest:
@@ -85,6 +92,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.pinterest,
           backgroundColor: Color(0xFFCB2027),
           onPressed: onPressed,
+          padding: padding,
           shape: shape,
         );
       case Buttons.Tumblr:
@@ -95,6 +103,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.tumblr,
           backgroundColor: Color(0xFF34526f),
           onPressed: onPressed,
+          padding: padding,
           shape: shape,
         );
       case Buttons.Twitter:
@@ -105,6 +114,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.twitter,
           backgroundColor: Color(0xFF1DA1F2),
           onPressed: onPressed,
+          padding: padding,
           shape: shape,
         );
       case Buttons.Reddit:
@@ -115,6 +125,7 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.reddit,
           backgroundColor: Color(0xFFFF4500),
           onPressed: onPressed,
+          padding: padding,
           shape: shape,
         );
       case Buttons.Email:
@@ -125,6 +136,7 @@ class SignInButton extends StatelessWidget {
           text: text ?? 'Sign in with Email',
           icon: Icons.email,
           onPressed: onPressed,
+          padding: padding,
           backgroundColor: Colors.grey[700],
           shape: shape,
         );
