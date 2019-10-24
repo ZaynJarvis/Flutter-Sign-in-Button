@@ -55,25 +55,28 @@ class SignInButton extends StatelessWidget {
           textColor: button == Buttons.Google
               ? Color.fromRGBO(0, 0, 0, 0.54)
               : Color(0xFFFFFFFF),
-          image: ClipRRect(
-            borderRadius: new BorderRadius.circular(8.0),
-            child: Image(
-              image: AssetImage(
-                button == Buttons.Google
-                    ? 'assets/logos/google_light.png'
-                    : 'assets/logos/google_dark.png',
-                package: 'flutter_signin_button',
+          image: Container(
+            margin: EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
+            child: ClipRRect(
+              borderRadius: new BorderRadius.circular(8.0),
+              child: Image(
+                image: AssetImage(
+                  button == Buttons.Google
+                      ? 'assets/logos/google_light.png'
+                      : 'assets/logos/google_dark.png',
+                  package: 'flutter_signin_button',
+                ),
+                height: 48.0,
+                width: 48.0,
               ),
-              height: 48.0,
-              width: 48.0,
             ),
           ),
           backgroundColor:
               button == Buttons.Google ? Color(0xFFFFFFFF) : Color(0xFF4285F4),
           onPressed: onPressed,
-          padding: padding,
+          padding: EdgeInsets.all(0),
           shape: shape,
-          width: mini ? 48.0 : 214.0,
+          // width: mini ? 48.0 : 214.0,
           height: mini ? 48.0 : 36.0,
         );
       case Buttons.Facebook:
