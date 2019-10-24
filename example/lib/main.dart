@@ -54,7 +54,7 @@ class SignInPage extends StatelessWidget {
                 _showButtonPressDialog(context, 'Email');
               },
               backgroundColor: Colors.blueGrey[700],
-              width: 200.0,
+              width: 220.0,
             ),
             Divider(),
             SignInButton(
@@ -79,9 +79,9 @@ class SignInPage extends StatelessWidget {
             ),
             Divider(),
             SignInButton(
-              Buttons.GitHub,
+              Buttons.Apple,
               onPressed: () {
-                _showButtonPressDialog(context, 'Github');
+                _showButtonPressDialog(context, 'Apple');
               },
             ),
             Divider(),
@@ -90,6 +90,14 @@ class SignInPage extends StatelessWidget {
               text: "Sign up with Pinterest",
               onPressed: () {
                 _showButtonPressDialog(context, 'Pinterest');
+              },
+            ),
+            Divider(),
+            SignInButton(
+              Buttons.GitHub,
+              text: "Sign up with GitHub",
+              onPressed: () {
+                _showButtonPressDialog(context, 'Github');
               },
             ),
             Divider(),

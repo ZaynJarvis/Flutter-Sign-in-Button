@@ -62,3 +62,13 @@
 
 - Add in Shape property
 - Fix mini for email button
+
+## 0.4.0
+
+- Add in padding
+- Add in custom font-size to solve overflow
+- Add in Signin with Apple
+
+## 0.4.1
+
+- Fix explicit null initialization

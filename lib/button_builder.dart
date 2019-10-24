@@ -25,7 +25,7 @@ class SignInButtonBuilder extends StatelessWidget {
 
   /// backgroundColor is required but textColor is default to `Colors.white`
   /// splashColor is defalt to `Colors.white30`
-  final Color textColor, backgroundColor, splashColor;
+  final Color textColor, iconColor, backgroundColor, splashColor;
 
   /// onPressed should be specified as a required field to indicate the callback.
   final Function onPressed;
@@ -41,7 +41,7 @@ class SignInButtonBuilder extends StatelessWidget {
   /// elevation has defalt value of 2.0
   final double elevation;
 
-  /// the height of the button; defaults to
+  /// the height of the button
   final double height;
 
   /// width is default to be 1/1.5 of the screen
@@ -53,10 +53,11 @@ class SignInButtonBuilder extends StatelessWidget {
     @required this.backgroundColor,
     @required this.onPressed,
     @required this.text,
-    this.icon,
+    this.icon = null,
     this.image = null,
     this.fontSize = 14.0,
     this.textColor = Colors.white,
+    this.iconColor = Colors.white,
     this.splashColor = Colors.white30,
     this.padding = const EdgeInsets.all(3.0),
     this.mini = false,
@@ -135,7 +136,7 @@ class SignInButtonBuilder extends StatelessWidget {
     }
     return Icon(
       icon,
-      color: Colors.white,
+      color: this.iconColor,
     );
   }
 }
