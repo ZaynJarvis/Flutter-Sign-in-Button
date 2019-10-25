@@ -72,3 +72,7 @@
 ## 0.4.1
 
 - Fix explicit null initialization
+
+## 0.5.0
+
+- Implement Google Buttons (w/o mini mode) according to Google guidelines. thx to @tariq86

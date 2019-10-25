@@ -113,13 +113,6 @@ class SignInPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SignInButton(
-                  Buttons.Google,
-                  mini: true,
-                  onPressed: () {
-                    _showButtonPressDialog(context, 'Google (mini)');
-                  },
-                ),
-                SignInButton(
                   Buttons.LinkedIn,
                   mini: true,
                   onPressed: () {

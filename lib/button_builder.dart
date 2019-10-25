@@ -31,7 +31,7 @@ class SignInButtonBuilder extends StatelessWidget {
   final Function onPressed;
 
   /// padding is default to `EdgeInsets.all(3.0)`
-  final EdgeInsets padding;
+  final EdgeInsets padding, innerPadding;
 
   /// shape is to specify the custom shape of the widget.
   /// However the flutter widgets contains restriction or bug
@@ -53,18 +53,19 @@ class SignInButtonBuilder extends StatelessWidget {
     @required this.backgroundColor,
     @required this.onPressed,
     @required this.text,
-    this.icon = null,
-    this.image = null,
+    this.icon,
+    this.image,
     this.fontSize = 14.0,
     this.textColor = Colors.white,
     this.iconColor = Colors.white,
     this.splashColor = Colors.white30,
-    this.padding = const EdgeInsets.all(3.0),
+    this.padding,
+    this.innerPadding,
     this.mini = false,
     this.elevation = 2.0,
     this.shape,
-    this.height = null,
-    this.width = null,
+    this.height,
+    this.width,
   })  : assert(text != null),
         assert(icon != null || image != null),
         assert(textColor != null),
@@ -108,7 +109,7 @@ class SignInButtonBuilder extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Padding(
-              padding: padding ??
+              padding: innerPadding ??
                   EdgeInsets.symmetric(
                     horizontal: MediaQuery.of(context).size.width / 20,
                   ),
