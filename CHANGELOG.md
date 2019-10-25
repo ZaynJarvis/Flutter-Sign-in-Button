@@ -81,3 +81,7 @@
 
 - Fix mini button padding
 - Use new demo image
+
+## 0.5.2
+
+- Fix readme image
