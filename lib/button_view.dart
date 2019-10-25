@@ -30,15 +30,14 @@ class SignInButton extends StatelessWidget {
   final EdgeInsets padding;
 
   /// The constructor is fairly self-explanatory.
-  SignInButton(this.button,
-      {
-        @required this.onPressed,
-        this.mini = false,
-        this.padding = const EdgeInsets.all(3.0),
-        this.shape,
-        this.text,
-      })
-      : assert(button != null),
+  SignInButton(
+    this.button, {
+    @required this.onPressed,
+    this.mini = false,
+    this.padding = const EdgeInsets.all(3.0),
+    this.shape = null,
+    this.text = null,
+  })  : assert(button != null),
         assert(onPressed != null);
 
   /// The build funtion is used to build the widget which will switch to
@@ -52,11 +51,33 @@ class SignInButton extends StatelessWidget {
           key: ValueKey("Google"),
           mini: mini,
           text: text ?? 'Sign in with Google',
-          icon: FontAwesomeIcons.google,
-          backgroundColor: button == Buttons.Google ? Color(0xFFDD4B39) : Color(0xFF4285F4),
+          fontSize: 18.0,
+          textColor: button == Buttons.Google
+              ? Color.fromRGBO(0, 0, 0, 0.54)
+              : Color(0xFFFFFFFF),
+          image: Container(
+            margin: EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
+            child: ClipRRect(
+              borderRadius: new BorderRadius.circular(8.0),
+              child: Image(
+                image: AssetImage(
+                  button == Buttons.Google
+                      ? 'assets/logos/google_light.png'
+                      : 'assets/logos/google_dark.png',
+                  package: 'flutter_signin_button',
+                ),
+                height: 48.0,
+                width: 48.0,
+              ),
+            ),
+          ),
+          backgroundColor:
+              button == Buttons.Google ? Color(0xFFFFFFFF) : Color(0xFF4285F4),
           onPressed: onPressed,
-          padding: padding,
+          padding: EdgeInsets.all(0),
           shape: shape,
+          // width: mini ? 48.0 : 214.0,
+          height: mini ? 48.0 : 36.0,
         );
       case Buttons.Facebook:
         return SignInButtonBuilder(
@@ -89,7 +110,8 @@ class SignInButton extends StatelessWidget {
           textColor: button == Buttons.Apple ? Colors.black : Colors.white,
           icon: FontAwesomeIcons.apple,
           iconColor: button == Buttons.Apple ? Colors.black : Colors.white,
-          backgroundColor: button == Buttons.Apple ? Color(0xFFFFFFFF) : Color(0xFF000000),
+          backgroundColor:
+              button == Buttons.Apple ? Color(0xFFFFFFFF) : Color(0xFF000000),
           onPressed: onPressed,
           padding: padding,
           shape: shape,

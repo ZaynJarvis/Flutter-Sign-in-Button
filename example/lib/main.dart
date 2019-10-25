@@ -18,6 +18,26 @@ class MyApp extends StatelessWidget {
 }
 
 class SignInPage extends StatelessWidget {
+  /// Show a simple "___ Button Pressed" dialog
+  void _showButtonPressDialog(BuildContext context, String provider) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return new AlertDialog(
+          title: Text('$provider button pressed'),
+          actions: <Widget>[
+            FlatButton(
+              child: Text('Okay'),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   /// Normally the signin buttons should be contained in the SignInPage
   @override
   Widget build(BuildContext context) {
@@ -30,52 +50,96 @@ class SignInPage extends StatelessWidget {
             SignInButtonBuilder(
               text: 'Get going with Email',
               icon: Icons.email,
-              onPressed: () {},
+              onPressed: () {
+                _showButtonPressDialog(context, 'Email');
+              },
               backgroundColor: Colors.blueGrey[700],
               width: 220.0,
             ),
             Divider(),
             SignInButton(
               Buttons.Google,
-              onPressed: () {},
+              onPressed: () {
+                _showButtonPressDialog(context, 'Google');
+              },
             ),
+            Divider(),
+            SignInButton(
+              Buttons.GoogleDark,
+              onPressed: () {
+                _showButtonPressDialog(context, 'Google (dark)');
+              },
+            ),
+            Divider(),
             SignInButton(
               Buttons.Facebook,
-              onPressed: () {},
+              onPressed: () {
+                _showButtonPressDialog(context, 'Facebook');
+              },
             ),
+            Divider(),
             SignInButton(
               Buttons.Apple,
-              onPressed: () {},
+              onPressed: () {
+                _showButtonPressDialog(context, 'Apple');
+              },
             ),
+            Divider(),
+            SignInButton(
+              Buttons.Pinterest,
+              text: "Sign up with Pinterest",
+              onPressed: () {
+                _showButtonPressDialog(context, 'Pinterest');
+              },
+            ),
+            Divider(),
             SignInButton(
               Buttons.GitHub,
               text: "Sign up with GitHub",
-              onPressed: () {},
+              onPressed: () {
+                _showButtonPressDialog(context, 'Github');
+              },
             ),
+            Divider(),
             SignInButton(
               Buttons.Twitter,
               text: "Use Twitter",
-              onPressed: () {},
+              onPressed: () {
+                _showButtonPressDialog(context, 'Twitter');
+              },
             ),
             Divider(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SignInButton(
+                  Buttons.Google,
+                  mini: true,
+                  onPressed: () {
+                    _showButtonPressDialog(context, 'Google (mini)');
+                  },
+                ),
+                SignInButton(
                   Buttons.LinkedIn,
                   mini: true,
-                  onPressed: () {},
+                  onPressed: () {
+                    _showButtonPressDialog(context, 'LinkedIn (mini)');
+                  },
                 ),
                 SignInButton(
                   Buttons.Tumblr,
                   mini: true,
-                  onPressed: () {},
+                  onPressed: () {
+                    _showButtonPressDialog(context, 'Tumblr (mini)');
+                  },
                 ),
                 SignInButtonBuilder(
                   icon: Icons.email,
                   text: "Ignored for mini button",
                   mini: true,
-                  onPressed: () {},
+                  onPressed: () {
+                    _showButtonPressDialog(context, 'Email (mini)');
+                  },
                   backgroundColor: Colors.cyan,
                 ),
               ],
