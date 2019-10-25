@@ -76,3 +76,8 @@
 ## 0.5.0
 
 - Implement Google Buttons (w/o mini mode) according to Google guidelines. thx to @tariq86
+
+## 0.5.1
+
+- Fix mini button padding
+- Use new demo image

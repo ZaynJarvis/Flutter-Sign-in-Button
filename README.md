@@ -9,7 +9,7 @@ Add to pubspec.yaml.
 ```yaml
 dependencies:
   ...
-  flutter_signin_button: ^0.5.0
+  flutter_signin_button: ^0.5.1
 ```
 
 ## Usage Example
@@ -72,6 +72,6 @@ enum Buttons {
 }
 ```
 
-<img src="https://i.pinimg.com/564x/64/2e/a4/642ea46654d3b0dff12bebafe288ba89.jpg" width="300">
+<img src="./showcase.png" width="300">
 
 **Refer to example folder and the source code for more information.**
