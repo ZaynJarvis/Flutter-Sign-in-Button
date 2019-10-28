@@ -34,14 +34,14 @@ class SignInButton extends StatelessWidget {
     this.button, {
     @required this.onPressed,
     this.mini = false,
-    this.padding = const EdgeInsets.all(3.0),
+    this.padding = const EdgeInsets.all(0),
     this.shape,
     this.text,
   })  : assert(button != null),
         assert(onPressed != null),
-        assert(mini != true
-            || !(button == Buttons.Google 
-            || button == Buttons.GoogleDark),
+        assert(
+            mini != true ||
+                !(button == Buttons.Google || button == Buttons.GoogleDark),
             "Google button does not support mini mode");
 
   /// The build funtion is used to build the widget which will switch to
@@ -54,14 +54,13 @@ class SignInButton extends StatelessWidget {
         return SignInButtonBuilder(
           key: ValueKey("Google"),
           text: text ?? 'Sign in with Google',
-          fontSize: 18.0,
           textColor: button == Buttons.Google
               ? Color.fromRGBO(0, 0, 0, 0.54)
               : Color(0xFFFFFFFF),
           image: Container(
             margin: EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
             child: ClipRRect(
-              borderRadius: new BorderRadius.circular(8.0),
+              borderRadius: BorderRadius.circular(8.0),
               child: Image(
                 image: AssetImage(
                   button == Buttons.Google
@@ -69,18 +68,17 @@ class SignInButton extends StatelessWidget {
                       : 'assets/logos/google_dark.png',
                   package: 'flutter_signin_button',
                 ),
-                height: 48.0,
-                width: 48.0,
+                height: 36.0,
               ),
             ),
           ),
           backgroundColor:
               button == Buttons.Google ? Color(0xFFFFFFFF) : Color(0xFF4285F4),
           onPressed: onPressed,
-          padding: EdgeInsets.all(0),
+          padding: padding,
           innerPadding: EdgeInsets.all(0),
           shape: shape,
-          height: mini ? 48.0 : 36.0,
+          height: 36.0,
         );
       case Buttons.Facebook:
         return SignInButtonBuilder(

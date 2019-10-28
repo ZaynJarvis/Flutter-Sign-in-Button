@@ -82,7 +82,7 @@ class SignInButtonBuilder extends StatelessWidget {
       minWidth: mini ? width ?? 35.0 : null,
       height: height,
       elevation: elevation,
-      padding: padding ?? EdgeInsets.all(3),
+      padding: padding ?? EdgeInsets.all(0),
       color: backgroundColor,
       onPressed: onPressed,
       splashColor: splashColor,
@@ -102,7 +102,7 @@ class SignInButtonBuilder extends StatelessWidget {
     }
     return Container(
       constraints: BoxConstraints(
-        maxWidth: width ?? MediaQuery.of(context).size.width / 1.5,
+        maxWidth: width ?? 220,
       ),
       child: Center(
         child: Row(
@@ -111,7 +111,7 @@ class SignInButtonBuilder extends StatelessWidget {
             Padding(
               padding: innerPadding ??
                   EdgeInsets.symmetric(
-                    horizontal: MediaQuery.of(context).size.width / 20,
+                    horizontal: 13,
                   ),
               child: _getIconOrImage(),
             ),
@@ -137,6 +137,7 @@ class SignInButtonBuilder extends StatelessWidget {
     }
     return Icon(
       icon,
+      size: 20,
       color: this.iconColor,
     );
   }

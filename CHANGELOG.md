@@ -85,3 +85,11 @@
 ## 0.5.2
 
 - Fix readme image
+
+## 1.0.0
+
+- NOT BACKWARD COMPATIBLE
+- change width restriction to pixel unit
+- consistent hight of default signin buttons
+- change default icon size
+- change demo action to snack bar
