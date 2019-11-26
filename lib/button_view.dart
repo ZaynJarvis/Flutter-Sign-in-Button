@@ -51,34 +51,51 @@ class SignInButton extends StatelessWidget {
     switch (button) {
       case Buttons.Google:
       case Buttons.GoogleDark:
-        return SignInButtonBuilder(
-          key: ValueKey("Google"),
-          text: text ?? 'Sign in with Google',
-          textColor: button == Buttons.Google
-              ? Color.fromRGBO(0, 0, 0, 0.54)
-              : Color(0xFFFFFFFF),
-          image: Container(
-            margin: EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(8.0),
-              child: Image(
-                image: AssetImage(
-                  button == Buttons.Google
-                      ? 'assets/logos/google_light.png'
-                      : 'assets/logos/google_dark.png',
-                  package: 'flutter_signin_button',
+        return Stack(
+          children: <Widget>[
+            SignInButtonBuilder(
+              key: ValueKey("Google"),
+              text: text ?? 'Sign in with Google',
+              textColor: button == Buttons.Google
+                  ? Color.fromRGBO(0, 0, 0, 0.54)
+                  : Color(0xFFFFFFFF),
+              image: Container(
+                margin: EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image(
+                    image: AssetImage(
+                      button == Buttons.Google
+                          ? 'assets/logos/google_light.png'
+                          : 'assets/logos/google_dark.png',
+                      package: 'flutter_signin_button',
+                    ),
+                    height: 36.0,
+                  ),
                 ),
+              ),
+              backgroundColor: button == Buttons.Google
+                  ? Color(0xFFFFFFFF)
+                  : Color(0xFF4285F4),
+              onPressed: onPressed,
+              padding: padding,
+              innerPadding: EdgeInsets.all(0),
+              shape: shape,
+              height: 36.0,
+            ),
+            Material(
+              shape: shape,
+              type: MaterialType.transparency,
+              child: Container(
+                margin: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 0.0),
+                width: 220,
                 height: 36.0,
+                child: InkWell(
+                  onTap: onPressed,
+                ),
               ),
             ),
-          ),
-          backgroundColor:
-              button == Buttons.Google ? Color(0xFFFFFFFF) : Color(0xFF4285F4),
-          onPressed: onPressed,
-          padding: padding,
-          innerPadding: EdgeInsets.all(0),
-          shape: shape,
-          height: 36.0,
+          ],
         );
       case Buttons.Facebook:
         return SignInButtonBuilder(
