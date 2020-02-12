@@ -20,12 +20,12 @@ class SignInButtonBuilder extends StatelessWidget {
   /// the button's text
   final String text;
 
-  /// The size of the label font
-  final double fontSize;
+  /// the button's text style
+  final TextStyle textStyle;
 
   /// backgroundColor is required but textColor is default to `Colors.white`
   /// splashColor is defalt to `Colors.white30`
-  final Color textColor, iconColor, backgroundColor, splashColor;
+  final Color iconColor, backgroundColor, splashColor;
 
   /// onPressed should be specified as a required field to indicate the callback.
   final Function onPressed;
@@ -53,10 +53,9 @@ class SignInButtonBuilder extends StatelessWidget {
     @required this.backgroundColor,
     @required this.onPressed,
     @required this.text,
+    this.textStyle,
     this.icon,
     this.image,
-    this.fontSize = 14.0,
-    this.textColor = Colors.white,
     this.iconColor = Colors.white,
     this.splashColor = Colors.white30,
     this.padding,
@@ -68,7 +67,6 @@ class SignInButtonBuilder extends StatelessWidget {
     this.width,
   })  : assert(text != null),
         assert(icon != null || image != null),
-        assert(textColor != null),
         assert(backgroundColor != null),
         assert(onPressed != null),
         assert(mini != null),
@@ -115,15 +113,14 @@ class SignInButtonBuilder extends StatelessWidget {
                   ),
               child: _getIconOrImage(),
             ),
-            Text(
-              text,
-              style: TextStyle(
-                fontFamily: 'Roboto',
-                color: textColor,
-                fontSize: fontSize,
-                backgroundColor: Color.fromRGBO(0, 0, 0, 0),
-              ),
-            ),
+            Text(text,
+                style: textStyle ??
+                    TextStyle(
+                      fontFamily: 'Roboto',
+                      color: Colors.white,
+                      fontSize: 14.0,
+                      backgroundColor: Color.fromRGBO(0, 0, 0, 0),
+                    )),
           ],
         ),
       ),
