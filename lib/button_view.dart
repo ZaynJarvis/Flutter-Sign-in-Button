@@ -172,6 +172,17 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
         );
+      case Buttons.Instagram:
+        return SignInButtonBuilder(
+          key: ValueKey("Instagram"),
+          mini: mini,
+          text: text ?? 'Sign in with Instagram',
+          icon: FontAwesomeIcons.instagram,
+          backgroundColor: Color(0xFFFF4500),
+          onPressed: onPressed,
+          padding: padding,
+          shape: shape,
+        );
       case Buttons.Email:
       default:
         return SignInButtonBuilder(

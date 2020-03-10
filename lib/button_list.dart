@@ -11,5 +11,6 @@ enum Buttons {
   Pinterest,
   Tumblr,
   Twitter,
-  Reddit
+  Reddit,
+  Instagram
 }
