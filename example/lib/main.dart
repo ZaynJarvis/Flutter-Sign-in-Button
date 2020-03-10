@@ -99,6 +99,14 @@ class SignInPage extends StatelessWidget {
             },
           ),
           Divider(),
+          SignInButton(
+            Buttons.Instagram,
+            text: "Sign up with Instagram",
+            onPressed: () {
+              _showButtonPressDialog(context, 'Instagram');
+            },
+          ),
+          Divider(),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -114,6 +122,13 @@ class SignInPage extends StatelessWidget {
                 mini: true,
                 onPressed: () {
                   _showButtonPressDialog(context, 'Tumblr (mini)');
+                },
+              ),
+              SignInButton(
+                Buttons.Instagram,
+                mini: true,
+                onPressed: () {
+                  _showButtonPressDialog(context, 'Instagram (mini)');
                 },
               ),
               SignInButtonBuilder(

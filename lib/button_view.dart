@@ -176,9 +176,9 @@ class SignInButton extends StatelessWidget {
         return SignInButtonBuilder(
           key: ValueKey("Instagram"),
           mini: mini,
-          text: text ?? 'Sign in with Instagram',
+          text: text ?? 'Sign in with Instagram',textColor: Colors.black,
           icon: FontAwesomeIcons.instagram,
-          backgroundColor: Color(0xFFFF4500),
+          backgroundColor: Colors.purpleAccent,
           onPressed: onPressed,
           padding: padding,
           shape: shape,
