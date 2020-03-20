@@ -11,5 +11,10 @@ enum Buttons {
   Pinterest,
   Tumblr,
   Twitter,
-  Reddit
+  Reddit,
+  Quora,
+  Yahoo,
+  Hotmail,
+  Xbox,
+
 }

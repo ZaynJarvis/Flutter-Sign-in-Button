@@ -172,6 +172,50 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
         );
+      case Buttons.Quora:
+        return SignInButtonBuilder(
+          key: ValueKey("Quora"),
+          mini: mini,
+          text: text ?? 'Sign in with Quora',
+          icon: FontAwesomeIcons.quora,
+          backgroundColor: Color(0xA40A00),
+          onPressed: onPressed,
+          padding: padding,
+          shape: shape,
+        );
+      case Buttons.Yahoo:
+        return SignInButtonBuilder(
+          key: ValueKey("Yahoo"),
+          mini: mini,
+          text: text ?? 'Sign in with Yahoo',
+          icon: FontAwesomeIcons.yahoo,
+          backgroundColor: Color(0x6001D2),
+          onPressed: onPressed,
+          padding: padding,
+          shape: shape,
+        );
+      case Buttons.Hotmail:
+        return SignInButtonBuilder(
+          key: ValueKey("Hotmail"),
+          mini: mini,
+          text: text ?? 'Sign in with Hotmail',
+          icon: FontAwesomeIcons.sms,
+          backgroundColor: Color(0x0072C6),
+          onPressed: onPressed,
+          padding: padding,
+          shape: shape,
+        );
+      case Buttons.Xbox:
+        return SignInButtonBuilder(
+          key: ValueKey("Xbox"),
+          mini: mini,
+          text: text ?? 'Sign in with Xbox',
+          icon: FontAwesomeIcons.xbox,
+          backgroundColor: Color(0x107C0F),
+          onPressed: onPressed,
+          padding: padding,
+          shape: shape,
+        );
       case Buttons.Email:
       default:
         return SignInButtonBuilder(
