@@ -28,6 +28,9 @@ class SignInButton extends StatelessWidget {
 
   /// overrides the default button padding
   final EdgeInsets padding;
+  
+  // overrides the default button elevation
+  final double elevation;
 
   /// The constructor is fairly self-explanatory.
   SignInButton(
@@ -37,6 +40,7 @@ class SignInButton extends StatelessWidget {
     this.padding = const EdgeInsets.all(0),
     this.shape,
     this.text,
+    this.elevation = 2.0,
   })  : assert(button != null),
         assert(onPressed != null),
         assert(
@@ -52,6 +56,7 @@ class SignInButton extends StatelessWidget {
       case Buttons.Google:
       case Buttons.GoogleDark:
         return SignInButtonBuilder(
+          elevation : elevation,
           key: ValueKey("Google"),
           text: text ?? 'Sign in with Google',
           textColor: button == Buttons.Google
@@ -82,6 +87,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Facebook:
         return SignInButtonBuilder(
+          elevation : elevation,
           key: ValueKey("Facebook"),
           mini: mini,
           text: text ?? 'Sign in with Facebook',
@@ -93,6 +99,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.GitHub:
         return SignInButtonBuilder(
+          elevation : elevation,
           key: ValueKey("GitHub"),
           mini: mini,
           text: text ?? 'Sign in with GitHub',
@@ -105,6 +112,7 @@ class SignInButton extends StatelessWidget {
       case Buttons.Apple:
       case Buttons.AppleDark:
         return SignInButtonBuilder(
+          elevation : elevation,
           key: ValueKey("Apple"),
           mini: mini,
           text: text ?? 'Sign in with Apple',
@@ -119,6 +127,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.LinkedIn:
         return SignInButtonBuilder(
+          elevation : elevation,
           key: ValueKey("LinkedIn"),
           mini: mini,
           text: text ?? 'Sign in with LinkedIn',
@@ -130,6 +139,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Pinterest:
         return SignInButtonBuilder(
+          elevation : elevation,
           key: ValueKey("Pinterest"),
           mini: mini,
           text: text ?? 'Sign in with Pinterest',
@@ -141,6 +151,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Tumblr:
         return SignInButtonBuilder(
+          elevation : elevation,
           key: ValueKey("Tumblr"),
           mini: mini,
           text: text ?? 'Sign in with Tumblr',
@@ -152,6 +163,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Twitter:
         return SignInButtonBuilder(
+          elevation : elevation,
           key: ValueKey("Twitter"),
           mini: mini,
           text: text ?? 'Sign in with Twitter',
@@ -163,6 +175,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Reddit:
         return SignInButtonBuilder(
+          elevation : elevation,
           key: ValueKey("Reddit"),
           mini: mini,
           text: text ?? 'Sign in with Reddit',
@@ -175,6 +188,7 @@ class SignInButton extends StatelessWidget {
       case Buttons.Email:
       default:
         return SignInButtonBuilder(
+          elevation : elevation,
           key: ValueKey("Email"),
           mini: mini,
           text: text ?? 'Sign in with Email',
