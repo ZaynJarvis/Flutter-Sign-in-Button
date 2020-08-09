@@ -93,6 +93,14 @@ class SignInPage extends StatelessWidget {
           Divider(),
           SignInButton(
             Buttons.Twitter,
+            text: "Microsoft ",
+            onPressed: () {
+              _showButtonPressDialog(context, 'Microsoft ');
+            },
+          ),
+          Divider(),
+          SignInButton(
+            Buttons.Twitter,
             text: "Use Twitter",
             onPressed: () {
               _showButtonPressDialog(context, 'Twitter');
