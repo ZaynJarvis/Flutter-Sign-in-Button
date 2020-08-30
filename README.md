@@ -1,3 +1,9 @@
+# WARNING: This repository is no longer maintained :warning:
+
+> This repository will not be updated.  to https://github.com/dmjones/flutter_auth_buttons for a better one.
+
+https://pub.dev/packages/flutter_auth_buttons
+
 A Flutter plugin for iOS and Android for generating signin buttons for different social media account.
 
 > Feedback and Pull Requests are most welcome!
