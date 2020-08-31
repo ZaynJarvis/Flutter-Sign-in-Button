@@ -97,7 +97,6 @@ class SignInButton extends StatelessWidget {
           icon: FontAwesomeIcons.facebookF,
           image: button == Buttons.FacebookNew
               ? ClipRRect(
-                  borderRadius: BorderRadius.circular(8.0),
                   child: Image(
                     image: AssetImage(
                       'assets/logos/facebook_new.png',
