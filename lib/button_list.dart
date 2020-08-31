@@ -4,6 +4,7 @@ enum Buttons {
   Google,
   GoogleDark,
   Facebook,
+  FacebookNew,
   GitHub,
   Apple,
   AppleDark,
@@ -16,5 +17,4 @@ enum Buttons {
   Yahoo,
   Hotmail,
   Xbox,
-
 }
