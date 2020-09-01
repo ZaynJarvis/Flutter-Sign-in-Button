@@ -93,3 +93,10 @@
 - consistent hight of default signin buttons
 - change default icon size
 - change demo action to snack bar
+
+## 1.1.0
+
+- expose elevation
+- add some new buttons
+- fix default font in button builder issue
+

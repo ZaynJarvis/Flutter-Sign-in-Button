@@ -62,13 +62,6 @@ class SignInPage extends StatelessWidget {
           ),
           Divider(),
           SignInButton(
-            Buttons.Facebook,
-            onPressed: () {
-              _showButtonPressDialog(context, 'Facebook');
-            },
-          ),
-          Divider(),
-          SignInButton(
             Buttons.FacebookNew,
             onPressed: () {
               _showButtonPressDialog(context, 'FacebookNew');
@@ -79,14 +72,6 @@ class SignInPage extends StatelessWidget {
             Buttons.Apple,
             onPressed: () {
               _showButtonPressDialog(context, 'Apple');
-            },
-          ),
-          Divider(),
-          SignInButton(
-            Buttons.Pinterest,
-            text: "Sign up with Pinterest",
-            onPressed: () {
-              _showButtonPressDialog(context, 'Pinterest');
             },
           ),
           Divider(),
