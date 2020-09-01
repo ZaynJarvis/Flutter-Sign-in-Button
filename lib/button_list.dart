@@ -17,4 +17,5 @@ enum Buttons {
   Yahoo,
   Hotmail,
   Xbox,
+  Microsoft,
 }

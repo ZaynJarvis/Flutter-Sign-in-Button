@@ -248,6 +248,17 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
         );
+       case Buttons.Microsoft:
+        return SignInButtonBuilder(
+          key: ValueKey("Microsoft"),
+          mini: mini,
+          text: text ?? 'Sign in with Microsoft',
+          icon: FontAwesomeIcons.microsoft,
+          backgroundColor: Color(0xff235A9F),
+          onPressed: onPressed,
+          padding: padding,
+          shape: shape,
+        );
       case Buttons.Email:
       default:
         return SignInButtonBuilder(
