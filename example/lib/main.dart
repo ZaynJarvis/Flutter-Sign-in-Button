@@ -69,6 +69,13 @@ class SignInPage extends StatelessWidget {
           ),
           Divider(),
           SignInButton(
+            Buttons.FacebookNew,
+            onPressed: () {
+              _showButtonPressDialog(context, 'FacebookNew');
+            },
+          ),
+          Divider(),
+          SignInButton(
             Buttons.Apple,
             onPressed: () {
               _showButtonPressDialog(context, 'Apple');
@@ -122,6 +129,13 @@ class SignInPage extends StatelessWidget {
                 mini: true,
                 onPressed: () {
                   _showButtonPressDialog(context, 'Tumblr (mini)');
+                },
+              ),
+              SignInButton(
+                Buttons.Facebook,
+                mini: true,
+                onPressed: () {
+                  _showButtonPressDialog(context, 'Facebook (mini)');
                 },
               ),
               SignInButtonBuilder(

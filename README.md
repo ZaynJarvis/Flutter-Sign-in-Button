@@ -9,7 +9,7 @@ Add to pubspec.yaml.
 ```yaml
 dependencies:
   ...
-  flutter_signin_button: ^1.0.0
+  flutter_signin_button: ^1.0.1
 ```
 
 ## Usage Example
@@ -63,7 +63,9 @@ SignInButtonBuilder(
 enum Buttons {
   Email,
   Google,
+  GoogleDark,
   Facebook,
+  FacebookNew,
   GitHub,
   LinkedIn,
   Pinterest,
