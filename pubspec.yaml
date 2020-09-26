@@ -22,3 +22,5 @@ flutter:
     - assets/logos/google_light.png
     - assets/logos/google_dark.png
     - assets/logos/facebook_new.png
+    - assets/logos/2.0x/
+    - assets/logos/3.0x/
