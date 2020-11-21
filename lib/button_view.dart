@@ -259,6 +259,18 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
         );
+      case Buttons.Phone:
+        return SignInButtonBuilder(
+          key: ValueKey("Phone"),
+          mini: mini,
+          text: text ?? 'Sign in with Phone Number',
+          icon: FontAwesomeIcons.phone,
+          iconColor: Colors.white,
+          backgroundColor: Color(0xff4CAF50),
+          onPressed: onPressed,
+          padding: padding,
+          shape: shape,
+        );
       case Buttons.Email:
       default:
         return SignInButtonBuilder(
