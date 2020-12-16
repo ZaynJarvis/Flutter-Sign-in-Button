@@ -47,6 +47,9 @@ class SignInButtonBuilder extends StatelessWidget {
   /// width is default to be 1/1.5 of the screen
   final double width;
 
+  /// Key to be passed to material button
+  final Key buttonKey;
+
   /// The constructor is self-explanatory.
   SignInButtonBuilder({
     Key key,
@@ -72,13 +75,14 @@ class SignInButtonBuilder extends StatelessWidget {
         assert(backgroundColor != null),
         assert(onPressed != null),
         assert(mini != null),
-        assert(elevation != null);
+        assert(elevation != null),
+        buttonKey = key;
 
   /// The build funtion will be help user to build the signin button widget.
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      key: key,
+      key: buttonKey,
       minWidth: mini ? width ?? 35.0 : null,
       height: height,
       elevation: elevation,
