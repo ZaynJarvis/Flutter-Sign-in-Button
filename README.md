@@ -9,7 +9,7 @@ Add to pubspec.yaml.
 ```yaml
 dependencies:
   ...
-  flutter_signin_button: ^1.1.0
+  flutter_signin_button: ^2.0.0-nullsafety.0
 ```
 
 ## Usage Example
@@ -53,7 +53,7 @@ SignInButtonBuilder(
   text: 'Sign in with Email',
   icon: Icons.email,
   onPressed: () {},
-  backgroundColor: Colors.blueGrey[700],
+  backgroundColor: Colors.blueGrey[700]!,
 )
 ```
 

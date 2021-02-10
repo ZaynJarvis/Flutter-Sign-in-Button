@@ -6,13 +6,13 @@ class SignInButtonBuilder extends StatelessWidget {
   ///
   /// Icon can be used to define the signin method
   /// User can use Flutter built-in Icons or font-awesome flutter's Icon
-  final IconData icon;
+  final IconData? icon;
 
   /// Override the icon section with a image logo
   /// For example, Google requires a colorized logo,
   /// which FontAwesome cannot display. If both image
   /// and icon are provided, image will take precedence
-  final Widget image;
+  final Widget? image;
 
   /// `mini` tag is used to switch from a full-width signin button to
   final bool mini;
@@ -31,28 +31,28 @@ class SignInButtonBuilder extends StatelessWidget {
   final Function onPressed;
 
   /// padding is default to `EdgeInsets.all(3.0)`
-  final EdgeInsets padding, innerPadding;
+  final EdgeInsets? padding, innerPadding;
 
   /// shape is to specify the custom shape of the widget.
   /// However the flutter widgets contains restriction or bug
   /// on material button, hence, comment out.
-  final ShapeBorder shape;
+  final ShapeBorder? shape;
 
   /// elevation has defalt value of 2.0
   final double elevation;
 
   /// the height of the button
-  final double height;
+  final double? height;
 
   /// width is default to be 1/1.5 of the screen
-  final double width;
+  final double? width;
 
   /// The constructor is self-explanatory.
   SignInButtonBuilder({
-    Key key,
-    @required this.backgroundColor,
-    @required this.onPressed,
-    @required this.text,
+    Key? key,
+    required this.backgroundColor,
+    required this.onPressed,
+    required this.text,
     this.icon,
     this.image,
     this.fontSize = 14.0,
@@ -66,13 +66,7 @@ class SignInButtonBuilder extends StatelessWidget {
     this.shape,
     this.height,
     this.width,
-  })  : assert(text != null),
-        assert(icon != null || image != null),
-        assert(textColor != null),
-        assert(backgroundColor != null),
-        assert(onPressed != null),
-        assert(mini != null),
-        assert(elevation != null);
+  });
 
   /// The build funtion will be help user to build the signin button widget.
   @override
@@ -84,7 +78,7 @@ class SignInButtonBuilder extends StatelessWidget {
       elevation: elevation,
       padding: padding ?? EdgeInsets.all(0),
       color: backgroundColor,
-      onPressed: onPressed,
+      onPressed: onPressed as void Function()?,
       splashColor: splashColor,
       child: _getButtonChild(context),
       shape: shape ?? ButtonTheme.of(context).shape,
@@ -130,7 +124,7 @@ class SignInButtonBuilder extends StatelessWidget {
   }
 
   /// Get the icon or image widget
-  Widget _getIconOrImage() {
+  Widget? _getIconOrImage() {
     if (image != null) {
       return image;
     }
