@@ -43,7 +43,7 @@ class SignInPage extends StatelessWidget {
             onPressed: () {
               _showButtonPressDialog(context, 'Email');
             },
-            backgroundColor: Colors.blueGrey[700],
+            backgroundColor: Colors.blueGrey[700]!,
             width: 220.0,
           ),
           Divider(),

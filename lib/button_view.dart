@@ -21,10 +21,10 @@ class SignInButton extends StatelessWidget {
   final bool mini;
 
   /// shape is to specify the custom shape of the widget.
-  final ShapeBorder shape;
+  final ShapeBorder? shape;
 
   /// overrides the default button text
-  final String text;
+  final String? text;
 
   /// overrides the default button padding
   final EdgeInsets padding;
@@ -35,15 +35,13 @@ class SignInButton extends StatelessWidget {
   /// The constructor is fairly self-explanatory.
   SignInButton(
     this.button, {
-    @required this.onPressed,
+    required this.onPressed,
     this.mini = false,
     this.padding = const EdgeInsets.all(0),
     this.shape,
     this.text,
     this.elevation = 2.0,
-  })  : assert(button != null),
-        assert(onPressed != null),
-        assert(
+  }) : assert(
             mini != true ||
                 !(button == Buttons.Google ||
                     button == Buttons.GoogleDark ||
@@ -248,7 +246,7 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
         );
-       case Buttons.Microsoft:
+      case Buttons.Microsoft:
         return SignInButtonBuilder(
           key: ValueKey("Microsoft"),
           mini: mini,
@@ -269,7 +267,7 @@ class SignInButton extends StatelessWidget {
           icon: Icons.email,
           onPressed: onPressed,
           padding: padding,
-          backgroundColor: Colors.grey[700],
+          backgroundColor: Colors.grey[700]!,
           shape: shape,
         );
     }
