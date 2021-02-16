@@ -25,7 +25,7 @@ class SignInButtonBuilder extends StatelessWidget {
 
   /// backgroundColor is required but textColor is default to `Colors.white`
   /// splashColor is defalt to `Colors.white30`
-  final Color textColor, iconColor, backgroundColor, splashColor;
+  final Color textColor, iconColor, backgroundColor, splashColor, highlightColor;
 
   /// onPressed should be specified as a required field to indicate the callback.
   final Function onPressed;
@@ -59,6 +59,7 @@ class SignInButtonBuilder extends StatelessWidget {
     this.textColor = Colors.white,
     this.iconColor = Colors.white,
     this.splashColor = Colors.white30,
+    this.highlightColor,
     this.padding,
     this.innerPadding,
     this.mini = false,
@@ -80,6 +81,7 @@ class SignInButtonBuilder extends StatelessWidget {
       color: backgroundColor,
       onPressed: onPressed as void Function()?,
       splashColor: splashColor,
+      highlightColor: highlightColor ?? Theme.of(context).highlightColor,
       child: _getButtonChild(context),
       shape: shape ?? ButtonTheme.of(context).shape,
     );
