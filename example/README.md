@@ -1,93 +1,16 @@
-## A Complete Example
+# example
 
-```dart
-import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/flutter_signin_button.dart';
+A new Flutter project.
 
-void main() => runApp(MyApp());
+## Getting Started
 
-class MyApp extends StatelessWidget {
-  /// This is an example app which make use of
-  /// `SignInButtonBuilder` and `SignInButton` class
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData.light(),
-      home: SignInPage(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
+This project is a starting point for a Flutter application.
 
-class SignInPage extends StatelessWidget {
-  /// Normally the signin buttons should be contained in the SignInPage
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromRGBO(50, 50, 50, 1.0),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SignInButtonBuilder(
-              text: 'Get going with Email',
-              icon: Icons.email,
-              onPressed: () {},
-              backgroundColor: Colors.blueGrey[700],
-              width: 200.0,
-            ),
-            Divider(),
-            SignInButton(
-              Buttons.Google,
-              onPressed: () {},
-            ),
-            SignInButton(
-              Buttons.Facebook,
-              onPressed: () {},
-            ),
-            SignInButton(
-              Buttons.GitHub,
-              onPressed: () {},
-            ),
-            SignInButton(
-              Buttons.Pinterest,
-              text: "Sign up with Pinterest",
-              onPressed: () {},
-            ),
-            SignInButton(
-              Buttons.Twitter,
-              text: "Use Twitter",
-              onPressed: () {},
-            ),
-            Divider(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SignInButton(
-                  Buttons.LinkedIn,
-                  mini: true,
-                  onPressed: () {},
-                ),
-                SignInButton(
-                  Buttons.Tumblr,
-                  mini: true,
-                  onPressed: () {},
-                ),
-                SignInButtonBuilder(
-                  icon: Icons.email,
-                  text: "Ignored for mini button",
-                  mini: true,
-                  onPressed: () {},
-                  backgroundColor: Colors.cyan,
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+A few resources to get you started if this is your first Flutter project:
 
-```
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
