@@ -100,7 +100,7 @@
 - add some new buttons
 - fix default font in button builder issue
 
-## 2.0.0-nullsafety.0
+## 2.0.0
 
 - Migrated package to null safety
-
+- use dart stable version >= 2.12.0
