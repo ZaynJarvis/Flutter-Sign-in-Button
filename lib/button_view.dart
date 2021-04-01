@@ -60,8 +60,8 @@ class SignInButton extends StatelessWidget {
           key: ValueKey("Google"),
           text: text ?? 'Sign in with Google',
           textColor: button == Buttons.Google
-              ? Color.fromRGBO(0, 0, 0, 0.54)
-              : Color(0xFFFFFFFF),
+              ? Colors.black,
+              : Colors.white,
           image: Container(
             margin: EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
             child: ClipRRect(
