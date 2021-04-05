@@ -53,7 +53,7 @@ SignInButtonBuilder(
   text: 'Sign in with Email',
   icon: Icons.email,
   onPressed: () {},
-  backgroundColor: Colors.blueGrey[700]!,
+  backgroundColor: Colors.blueGrey.shade700,
 )
 ```
 
