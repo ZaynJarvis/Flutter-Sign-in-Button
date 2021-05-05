@@ -24,7 +24,7 @@ class SignInButtonBuilder extends StatelessWidget {
   final double fontSize;
 
   /// backgroundColor is required but textColor is default to `Colors.white`
-  /// splashColor is defalt to `Colors.white30`
+  /// splashColor is default to `Colors.white30`
   final Color textColor,
       iconColor,
       backgroundColor,
@@ -42,7 +42,7 @@ class SignInButtonBuilder extends StatelessWidget {
   /// on material button, hence, comment out.
   final ShapeBorder? shape;
 
-  /// elevation has defalt value of 2.0
+  /// elevation has default value of 2.0
   final double elevation;
 
   /// the height of the button
@@ -52,7 +52,7 @@ class SignInButtonBuilder extends StatelessWidget {
   final double? width;
 
   /// The constructor is self-explanatory.
-  SignInButtonBuilder({
+  const SignInButtonBuilder({
     Key? key,
     required this.backgroundColor,
     required this.onPressed,
@@ -71,9 +71,9 @@ class SignInButtonBuilder extends StatelessWidget {
     this.shape,
     this.height,
     this.width,
-  });
+  }) : super(key: key);
 
-  /// The build funtion will be help user to build the signin button widget.
+  /// The build function will be help user to build the signin button widget.
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
@@ -81,7 +81,7 @@ class SignInButtonBuilder extends StatelessWidget {
       minWidth: mini ? width ?? 35.0 : null,
       height: height,
       elevation: elevation,
-      padding: padding ?? EdgeInsets.all(0),
+      padding: padding ?? const EdgeInsets.all(0),
       color: backgroundColor,
       onPressed: onPressed as void Function()?,
       splashColor: splashColor,
@@ -110,7 +110,7 @@ class SignInButtonBuilder extends StatelessWidget {
           children: <Widget>[
             Padding(
               padding: innerPadding ??
-                  EdgeInsets.symmetric(
+                  const EdgeInsets.symmetric(
                     horizontal: 13,
                   ),
               child: _getIconOrImage(),
@@ -120,7 +120,7 @@ class SignInButtonBuilder extends StatelessWidget {
               style: TextStyle(
                 color: textColor,
                 fontSize: fontSize,
-                backgroundColor: Color.fromRGBO(0, 0, 0, 0),
+                backgroundColor: const Color.fromRGBO(0, 0, 0, 0),
               ),
             ),
           ],
@@ -137,7 +137,7 @@ class SignInButtonBuilder extends StatelessWidget {
     return Icon(
       icon,
       size: 20,
-      color: this.iconColor,
+      color: iconColor,
     );
   }
 }

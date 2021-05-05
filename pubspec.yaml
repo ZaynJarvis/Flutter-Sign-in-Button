@@ -1,5 +1,6 @@
 name: flutter_signin_button
-description: A Flutter plugin for iOS and Android for generating signin buttons for different social media account.
+description: A Flutter plugin for iOS and Android for generating signin buttons for different
+  social media account.
 homepage: https://github.com/ZaynJarvis/Flutter-Sign-in-Button
 version: 2.0.0
 
