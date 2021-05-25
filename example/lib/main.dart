@@ -117,7 +117,7 @@ class SignInPage extends StatelessWidget {
                 },
               ),
               SignInButton(
-                Buttons.Facebook,
+                Buttons.FacebookNew,
                 mini: true,
                 onPressed: () {
                   _showButtonPressDialog(context, 'Facebook (mini)');

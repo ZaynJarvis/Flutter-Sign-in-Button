@@ -44,9 +44,8 @@ class SignInButton extends StatelessWidget {
   }) : assert(
             mini != true ||
                 !(button == Buttons.Google ||
-                    button == Buttons.GoogleDark ||
-                    button == Buttons.FacebookNew),
-            "Google and FacebookNew buttons do not support mini mode");
+                    button == Buttons.GoogleDark),
+            "Google buttons do not support mini mode");
 
   /// The build funtion is used to build the widget which will switch to
   /// desired widget based on the enum class `Buttons`
@@ -86,7 +85,6 @@ class SignInButton extends StatelessWidget {
           height: 36.0,
         );
       case Buttons.Facebook:
-      case Buttons.FacebookNew:
         return SignInButtonBuilder(
           elevation: elevation,
           key: ValueKey("Facebook"),
@@ -103,6 +101,37 @@ class SignInButton extends StatelessWidget {
                     height: 24.0,
                   ),
                 )
+              : null,
+          backgroundColor: button == Buttons.FacebookNew
+              ? Color(0xFF1877f2)
+              : Color(0xFF3B5998),
+          innerPadding: button == Buttons.FacebookNew
+              ? EdgeInsets.fromLTRB(12, 0, 11, 0)
+              : null,
+          onPressed: onPressed,
+          padding: padding,
+          shape: shape,
+        );
+      case Buttons.FacebookNew:
+        return SignInButtonBuilder(
+          elevation: elevation,
+          key: ValueKey("Facebook"),
+          mini: mini,
+          text: text ?? 'Sign in with Facebook',
+          icon: FontAwesomeIcons.facebookF,
+          image: button == Buttons.FacebookNew
+              ? ClipRRect(
+            child: Padding(
+              padding: mini ? const EdgeInsets.all(6.0) : const EdgeInsets.all(0.0),
+              child: Image(
+                image: AssetImage(
+                  'assets/logos/facebook_new.png',
+                  package: 'flutter_signin_button',
+                ),
+                height: 24.0,
+              ),
+            ),
+          )
               : null,
           backgroundColor: button == Buttons.FacebookNew
               ? Color(0xFF1877f2)
