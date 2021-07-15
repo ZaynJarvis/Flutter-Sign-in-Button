@@ -132,6 +132,20 @@ class SignInPage extends StatelessWidget {
                 },
                 backgroundColor: Colors.cyan,
               ),
+              SignInButton(
+                Buttons.Google,
+                mini: true,
+                onPressed: () {
+                  _showButtonPressDialog(context, 'Google');
+                },
+              ),
+              SignInButton(
+                Buttons.GoogleDark,
+                mini: true,
+                onPressed: () {
+                  _showButtonPressDialog(context, 'Google (dark)');
+                },
+              ),
             ],
           ),
         ],

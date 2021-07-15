@@ -41,12 +41,7 @@ class SignInButton extends StatelessWidget {
     this.shape,
     this.text,
     this.elevation = 2.0,
-  }) : assert(
-            mini != true ||
-                !(button == Buttons.Google ||
-                    button == Buttons.GoogleDark ||
-                    button == Buttons.FacebookNew),
-            "Google and FacebookNew buttons do not support mini mode");
+  });
 
   /// The build funtion is used to build the widget which will switch to
   /// desired widget based on the enum class `Buttons`
@@ -56,6 +51,7 @@ class SignInButton extends StatelessWidget {
       case Buttons.Google:
       case Buttons.GoogleDark:
         return SignInButtonBuilder(
+          mini: mini,
           elevation: elevation,
           key: ValueKey("Google"),
           text: text ?? 'Sign in with Google',
@@ -63,7 +59,7 @@ class SignInButton extends StatelessWidget {
               ? Color.fromRGBO(0, 0, 0, 0.54)
               : Color(0xFFFFFFFF),
           image: Container(
-            margin: EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
+            margin: mini?EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0):EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(8.0),
               child: Image(
@@ -84,6 +80,7 @@ class SignInButton extends StatelessWidget {
           innerPadding: EdgeInsets.all(0),
           shape: shape,
           height: 36.0,
+
         );
       case Buttons.Facebook:
       case Buttons.FacebookNew:
