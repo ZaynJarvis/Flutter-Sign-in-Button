@@ -81,7 +81,6 @@ class SignInButton extends StatelessWidget {
               button == Buttons.Google ? Color(0xFFFFFFFF) : Color(0xFF4285F4),
           onPressed: onPressed,
           padding: padding,
-          innerPadding: EdgeInsets.all(0),
           shape: shape,
           height: 36.0,
         );
