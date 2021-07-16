@@ -59,6 +59,12 @@ class SignInButton extends StatelessWidget {
           elevation: elevation,
           key: ValueKey("Google"),
           text: text ?? 'Sign in with Google',
+          splashColor: button == Buttons.Google
+              ? Color.fromRGBO(224, 255, 255, 1)
+              : Colors.white30,
+          highlightColor: button == Buttons.Google
+              ? Color.fromRGBO(0, 255, 255, 0.1)
+              : Colors.white30,
           textColor: button == Buttons.Google
               ? Color.fromRGBO(0, 0, 0, 0.54)
               : Color(0xFFFFFFFF),
@@ -131,6 +137,12 @@ class SignInButton extends StatelessWidget {
         return SignInButtonBuilder(
           elevation: elevation,
           key: ValueKey("Apple"),
+          splashColor: button == Buttons.Apple
+              ? Color.fromRGBO(224, 255, 255, 1)
+              : Colors.white30,
+          highlightColor: button == Buttons.Apple
+              ? Color.fromRGBO(0, 255, 255, 0.1)
+              : Colors.white30,
           mini: mini,
           text: text ?? 'Sign in with Apple',
           textColor: button == Buttons.Apple ? Colors.black : Colors.white,
