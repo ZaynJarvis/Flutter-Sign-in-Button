@@ -32,7 +32,7 @@ class SignInButtonBuilder extends StatelessWidget {
       highlightColor;
 
   /// onPressed should be specified as a required field to indicate the callback.
-  final Function onPressed;
+  final Function? onPressed;
 
   /// padding is default to `EdgeInsets.all(3.0)`
   final EdgeInsets? padding, innerPadding;
@@ -76,18 +76,22 @@ class SignInButtonBuilder extends StatelessWidget {
   /// The build funtion will be help user to build the signin button widget.
   @override
   Widget build(BuildContext context) {
-    return MaterialButton(
-      key: key,
-      minWidth: mini ? width ?? 35.0 : null,
-      height: height,
-      elevation: elevation,
-      padding: padding ?? EdgeInsets.all(0),
-      color: backgroundColor,
-      onPressed: onPressed as void Function()?,
-      splashColor: splashColor,
-      highlightColor: highlightColor,
-      child: _getButtonChild(context),
-      shape: shape ?? ButtonTheme.of(context).shape,
+    return Opacity(
+      opacity: onPressed == null ? 0.3 : 1,
+      child: MaterialButton(
+        key: key,
+        minWidth: mini ? width ?? 35.0 : null,
+        height: height,
+        elevation: elevation,
+        padding: padding ?? EdgeInsets.all(0),
+        color: backgroundColor,
+        disabledColor: backgroundColor,
+        onPressed: onPressed as void Function()?,
+        splashColor: splashColor,
+        highlightColor: highlightColor,
+        child: _getButtonChild(context),
+        shape: shape ?? ButtonTheme.of(context).shape,
+      ),
     );
   }
 

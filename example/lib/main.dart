@@ -76,6 +76,12 @@ class SignInPage extends StatelessWidget {
           ),
           Divider(),
           SignInButton(
+            Buttons.Apple,
+            text: "this is null Apple",
+            onPressed: null,
+          ),
+          Divider(),
+          SignInButton(
             Buttons.GitHub,
             text: "Sign up with GitHub",
             onPressed: () {
