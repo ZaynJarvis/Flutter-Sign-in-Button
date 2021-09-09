@@ -32,6 +32,9 @@ class SignInButton extends StatelessWidget {
   // overrides the default button elevation
   final double elevation;
 
+  ///button should have a width for longer text
+  final double? width;
+
   /// The constructor is fairly self-explanatory.
   SignInButton(
     this.button, {
@@ -41,6 +44,7 @@ class SignInButton extends StatelessWidget {
     this.shape,
     this.text,
     this.elevation = 2.0,
+    this.width,
   }) : assert(
             mini != true ||
                 !(button == Buttons.Google ||
@@ -56,6 +60,7 @@ class SignInButton extends StatelessWidget {
       case Buttons.Google:
       case Buttons.GoogleDark:
         return SignInButtonBuilder(
+          width: width,
           elevation: elevation,
           key: ValueKey("Google"),
           text: text ?? 'Sign in with Google',
@@ -88,6 +93,7 @@ class SignInButton extends StatelessWidget {
       case Buttons.Facebook:
       case Buttons.FacebookNew:
         return SignInButtonBuilder(
+          width: width,
           elevation: elevation,
           key: ValueKey("Facebook"),
           mini: mini,
@@ -116,6 +122,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.GitHub:
         return SignInButtonBuilder(
+          width: width,
           elevation: elevation,
           key: ValueKey("GitHub"),
           mini: mini,
@@ -129,6 +136,7 @@ class SignInButton extends StatelessWidget {
       case Buttons.Apple:
       case Buttons.AppleDark:
         return SignInButtonBuilder(
+          width: width,
           elevation: elevation,
           key: ValueKey("Apple"),
           mini: mini,
@@ -144,6 +152,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.LinkedIn:
         return SignInButtonBuilder(
+          width: width,
           elevation: elevation,
           key: ValueKey("LinkedIn"),
           mini: mini,
@@ -156,6 +165,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Pinterest:
         return SignInButtonBuilder(
+          width: width,
           elevation: elevation,
           key: ValueKey("Pinterest"),
           mini: mini,
@@ -168,6 +178,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Tumblr:
         return SignInButtonBuilder(
+          width: width,
           elevation: elevation,
           key: ValueKey("Tumblr"),
           mini: mini,
@@ -180,6 +191,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Twitter:
         return SignInButtonBuilder(
+          width: width,
           elevation: elevation,
           key: ValueKey("Twitter"),
           mini: mini,
@@ -192,6 +204,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Reddit:
         return SignInButtonBuilder(
+          width: width,
           elevation: elevation,
           key: ValueKey("Reddit"),
           mini: mini,
@@ -204,6 +217,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Quora:
         return SignInButtonBuilder(
+          width: width,
           key: ValueKey("Quora"),
           mini: mini,
           text: text ?? 'Sign in with Quora',
@@ -215,6 +229,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Yahoo:
         return SignInButtonBuilder(
+          width: width,
           key: ValueKey("Yahoo"),
           mini: mini,
           text: text ?? 'Sign in with Yahoo',
@@ -226,6 +241,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Hotmail:
         return SignInButtonBuilder(
+          width: width,
           key: ValueKey("Hotmail"),
           mini: mini,
           text: text ?? 'Sign in with Hotmail',
@@ -237,6 +253,7 @@ class SignInButton extends StatelessWidget {
         );
       case Buttons.Xbox:
         return SignInButtonBuilder(
+          width: width,
           key: ValueKey("Xbox"),
           mini: mini,
           text: text ?? 'Sign in with Xbox',
@@ -260,6 +277,7 @@ class SignInButton extends StatelessWidget {
       case Buttons.Email:
       default:
         return SignInButtonBuilder(
+          width: width,
           elevation: elevation,
           key: ValueKey("Email"),
           mini: mini,
