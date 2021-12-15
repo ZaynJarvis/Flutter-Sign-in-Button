@@ -51,6 +51,12 @@ class SignInButtonBuilder extends StatelessWidget {
   /// width is default to be 1/1.5 of the screen
   final double? width;
 
+  /// overrides the default ellipsis text overflow
+  final TextOverflow? overflow;
+
+  /// overrides the default max lines in case of text overflow
+  final int maxLines;
+
   /// The constructor is self-explanatory.
   SignInButtonBuilder({
     Key? key,
@@ -71,6 +77,8 @@ class SignInButtonBuilder extends StatelessWidget {
     this.shape,
     this.height,
     this.width,
+    this.overflow = TextOverflow.ellipsis,
+    this.maxLines = 1,
   });
 
   /// The build funtion will be help user to build the signin button widget.
@@ -115,12 +123,16 @@ class SignInButtonBuilder extends StatelessWidget {
                   ),
               child: _getIconOrImage(),
             ),
-            Text(
-              text,
-              style: TextStyle(
-                color: textColor,
-                fontSize: fontSize,
-                backgroundColor: Color.fromRGBO(0, 0, 0, 0),
+            Flexible(
+              child: Text(
+                text,
+                maxLines: maxLines,
+                overflow: overflow,
+                style: TextStyle(
+                  color: textColor,
+                  fontSize: fontSize,
+                  backgroundColor: Color.fromRGBO(0, 0, 0, 0),
+                ),
               ),
             ),
           ],
