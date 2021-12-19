@@ -15,7 +15,7 @@ class SignInButton extends StatelessWidget {
   final Function onPressed;
 
   /// button should be used from the enum class `Buttons`
-  final Buttons button;
+  final Buttons? button;
 
   /// mini is a boolean field which specify whether to use a square mini button.
   final bool mini;
