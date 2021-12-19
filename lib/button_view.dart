@@ -33,8 +33,8 @@ class SignInButton extends StatelessWidget {
   final double elevation;
 
   /// The constructor is fairly self-explanatory.
-  SignInButton(
-    this.button, {
+  SignInButton({
+    this.button,
     required this.onPressed,
     this.mini = false,
     this.padding = const EdgeInsets.all(0),
