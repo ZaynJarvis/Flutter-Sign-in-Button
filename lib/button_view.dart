@@ -33,22 +33,24 @@ class SignInButton extends StatelessWidget {
   final double elevation;
 
   /// The constructor is fairly self-explanatory.
-  SignInButton(
+  const SignInButton(
     this.button, {
+    Key? key,
     required this.onPressed,
     this.mini = false,
     this.padding = const EdgeInsets.all(0),
     this.shape,
     this.text,
     this.elevation = 2.0,
-  }) : assert(
+  })  : assert(
             mini != true ||
                 !(button == Buttons.Google ||
                     button == Buttons.GoogleDark ||
                     button == Buttons.FacebookNew),
-            "Google and FacebookNew buttons do not support mini mode");
+            'Google and FacebookNew buttons do not support mini mode'),
+        super(key: key);
 
-  /// The build funtion is used to build the widget which will switch to
+  /// The build function is used to build the widget which will switch to
   /// desired widget based on the enum class `Buttons`
   @override
   Widget build(BuildContext context) {
@@ -57,13 +59,13 @@ class SignInButton extends StatelessWidget {
       case Buttons.GoogleDark:
         return SignInButtonBuilder(
           elevation: elevation,
-          key: ValueKey("Google"),
+          key: const ValueKey('Google'),
           text: text ?? 'Sign in with Google',
           textColor: button == Buttons.Google
-              ? Color.fromRGBO(0, 0, 0, 0.54)
-              : Color(0xFFFFFFFF),
+              ? const Color.fromRGBO(0, 0, 0, 0.54)
+              : const Color(0xFFFFFFFF),
           image: Container(
-            margin: EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
+            margin: const EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(8.0),
               child: Image(
@@ -77,11 +79,12 @@ class SignInButton extends StatelessWidget {
               ),
             ),
           ),
-          backgroundColor:
-              button == Buttons.Google ? Color(0xFFFFFFFF) : Color(0xFF4285F4),
+          backgroundColor: button == Buttons.Google
+              ? const Color(0xFFFFFFFF)
+              : const Color(0xFF4285F4),
           onPressed: onPressed,
           padding: padding,
-          innerPadding: EdgeInsets.all(0),
+          innerPadding: const EdgeInsets.all(0),
           shape: shape,
           height: 36.0,
         );
@@ -89,12 +92,12 @@ class SignInButton extends StatelessWidget {
       case Buttons.FacebookNew:
         return SignInButtonBuilder(
           elevation: elevation,
-          key: ValueKey("Facebook"),
+          key: const ValueKey('Facebook'),
           mini: mini,
           text: text ?? 'Sign in with Facebook',
           icon: FontAwesomeIcons.facebookF,
           image: button == Buttons.FacebookNew
-              ? ClipRRect(
+              ? const ClipRRect(
                   child: Image(
                     image: AssetImage(
                       'assets/logos/facebook_new.png',
@@ -105,10 +108,10 @@ class SignInButton extends StatelessWidget {
                 )
               : null,
           backgroundColor: button == Buttons.FacebookNew
-              ? Color(0xFF1877f2)
-              : Color(0xFF3B5998),
+              ? const Color(0xFF1877f2)
+              : const Color(0xFF3B5998),
           innerPadding: button == Buttons.FacebookNew
-              ? EdgeInsets.fromLTRB(12, 0, 11, 0)
+              ? const EdgeInsets.fromLTRB(12, 0, 11, 0)
               : null,
           onPressed: onPressed,
           padding: padding,
@@ -117,11 +120,11 @@ class SignInButton extends StatelessWidget {
       case Buttons.GitHub:
         return SignInButtonBuilder(
           elevation: elevation,
-          key: ValueKey("GitHub"),
+          key: const ValueKey('GitHub'),
           mini: mini,
           text: text ?? 'Sign in with GitHub',
           icon: FontAwesomeIcons.github,
-          backgroundColor: Color(0xFF444444),
+          backgroundColor: const Color(0xFF444444),
           onPressed: onPressed,
           padding: padding,
           shape: shape,
@@ -130,14 +133,15 @@ class SignInButton extends StatelessWidget {
       case Buttons.AppleDark:
         return SignInButtonBuilder(
           elevation: elevation,
-          key: ValueKey("Apple"),
+          key: const ValueKey('Apple'),
           mini: mini,
           text: text ?? 'Sign in with Apple',
           textColor: button == Buttons.Apple ? Colors.black : Colors.white,
           icon: FontAwesomeIcons.apple,
           iconColor: button == Buttons.Apple ? Colors.black : Colors.white,
-          backgroundColor:
-              button == Buttons.Apple ? Color(0xFFFFFFFF) : Color(0xFF000000),
+          backgroundColor: button == Buttons.Apple
+              ? const Color(0xFFFFFFFF)
+              : const Color(0xFF000000),
           onPressed: onPressed,
           padding: padding,
           shape: shape,
@@ -145,11 +149,11 @@ class SignInButton extends StatelessWidget {
       case Buttons.LinkedIn:
         return SignInButtonBuilder(
           elevation: elevation,
-          key: ValueKey("LinkedIn"),
+          key: const ValueKey('LinkedIn'),
           mini: mini,
           text: text ?? 'Sign in with LinkedIn',
           icon: FontAwesomeIcons.linkedinIn,
-          backgroundColor: Color(0xFF007BB6),
+          backgroundColor: const Color(0xFF007BB6),
           onPressed: onPressed,
           padding: padding,
           shape: shape,
@@ -157,11 +161,11 @@ class SignInButton extends StatelessWidget {
       case Buttons.Pinterest:
         return SignInButtonBuilder(
           elevation: elevation,
-          key: ValueKey("Pinterest"),
+          key: const ValueKey('Pinterest'),
           mini: mini,
           text: text ?? 'Sign in with Pinterest',
           icon: FontAwesomeIcons.pinterest,
-          backgroundColor: Color(0xFFCB2027),
+          backgroundColor: const Color(0xFFCB2027),
           onPressed: onPressed,
           padding: padding,
           shape: shape,
@@ -169,11 +173,11 @@ class SignInButton extends StatelessWidget {
       case Buttons.Tumblr:
         return SignInButtonBuilder(
           elevation: elevation,
-          key: ValueKey("Tumblr"),
+          key: const ValueKey('Tumblr'),
           mini: mini,
           text: text ?? 'Sign in with Tumblr',
           icon: FontAwesomeIcons.tumblr,
-          backgroundColor: Color(0xFF34526f),
+          backgroundColor: const Color(0xFF34526f),
           onPressed: onPressed,
           padding: padding,
           shape: shape,
@@ -181,11 +185,11 @@ class SignInButton extends StatelessWidget {
       case Buttons.Twitter:
         return SignInButtonBuilder(
           elevation: elevation,
-          key: ValueKey("Twitter"),
+          key: const ValueKey('Twitter'),
           mini: mini,
           text: text ?? 'Sign in with Twitter',
           icon: FontAwesomeIcons.twitter,
-          backgroundColor: Color(0xFF1DA1F2),
+          backgroundColor: const Color(0xFF1DA1F2),
           onPressed: onPressed,
           padding: padding,
           shape: shape,
@@ -193,66 +197,66 @@ class SignInButton extends StatelessWidget {
       case Buttons.Reddit:
         return SignInButtonBuilder(
           elevation: elevation,
-          key: ValueKey("Reddit"),
+          key: const ValueKey('Reddit'),
           mini: mini,
           text: text ?? 'Sign in with Reddit',
           icon: FontAwesomeIcons.reddit,
-          backgroundColor: Color(0xFFFF4500),
+          backgroundColor: const Color(0xFFFF4500),
           onPressed: onPressed,
           padding: padding,
           shape: shape,
         );
       case Buttons.Quora:
         return SignInButtonBuilder(
-          key: ValueKey("Quora"),
+          key: const ValueKey('Quora'),
           mini: mini,
           text: text ?? 'Sign in with Quora',
           icon: FontAwesomeIcons.quora,
-          backgroundColor: Color(0xA40A00),
+          backgroundColor: const Color(0x00a40a00),
           onPressed: onPressed,
           padding: padding,
           shape: shape,
         );
       case Buttons.Yahoo:
         return SignInButtonBuilder(
-          key: ValueKey("Yahoo"),
+          key: const ValueKey('Yahoo'),
           mini: mini,
           text: text ?? 'Sign in with Yahoo',
           icon: FontAwesomeIcons.yahoo,
-          backgroundColor: Color(0x6001D2),
+          backgroundColor: const Color(0x006001d2),
           onPressed: onPressed,
           padding: padding,
           shape: shape,
         );
       case Buttons.Hotmail:
         return SignInButtonBuilder(
-          key: ValueKey("Hotmail"),
+          key: const ValueKey('Hotmail'),
           mini: mini,
           text: text ?? 'Sign in with Hotmail',
           icon: FontAwesomeIcons.sms,
-          backgroundColor: Color(0x0072C6),
+          backgroundColor: const Color(0x000072c6),
           onPressed: onPressed,
           padding: padding,
           shape: shape,
         );
       case Buttons.Xbox:
         return SignInButtonBuilder(
-          key: ValueKey("Xbox"),
+          key: const ValueKey('Xbox'),
           mini: mini,
           text: text ?? 'Sign in with Xbox',
           icon: FontAwesomeIcons.xbox,
-          backgroundColor: Color(0x107C0F),
+          backgroundColor: const Color(0x00107c0f),
           onPressed: onPressed,
           padding: padding,
           shape: shape,
         );
       case Buttons.Microsoft:
         return SignInButtonBuilder(
-          key: ValueKey("Microsoft"),
+          key: const ValueKey('Microsoft'),
           mini: mini,
           text: text ?? 'Sign in with Microsoft',
           icon: FontAwesomeIcons.microsoft,
-          backgroundColor: Color(0xff235A9F),
+          backgroundColor: const Color(0xff235A9F),
           onPressed: onPressed,
           padding: padding,
           shape: shape,
@@ -261,7 +265,7 @@ class SignInButton extends StatelessWidget {
       default:
         return SignInButtonBuilder(
           elevation: elevation,
-          key: ValueKey("Email"),
+          key: const ValueKey('Email'),
           mini: mini,
           text: text ?? 'Sign in with Email',
           icon: Icons.email,

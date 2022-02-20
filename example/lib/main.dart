@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData.light(),
       home: Scaffold(
-        backgroundColor: Color.fromRGBO(50, 50, 50, 1.0),
+        backgroundColor: const Color.fromRGBO(50, 50, 50, 1.0),
         body: SignInPage(),
       ),
       debugShowCheckedModeBanner: false,
@@ -23,10 +23,10 @@ class MyApp extends StatelessWidget {
 class SignInPage extends StatelessWidget {
   /// Show a simple "___ Button Pressed" indicator
   void _showButtonPressDialog(BuildContext context, String provider) {
-    Scaffold.of(context).showSnackBar(SnackBar(
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Text('$provider Button Pressed!'),
       backgroundColor: Colors.black26,
-      duration: Duration(milliseconds: 400),
+      duration: const Duration(milliseconds: 400),
     ));
   }
 
@@ -46,59 +46,59 @@ class SignInPage extends StatelessWidget {
             backgroundColor: Colors.blueGrey[700]!,
             width: 220.0,
           ),
-          Divider(),
+          const Divider(),
           SignInButton(
             Buttons.Google,
             onPressed: () {
               _showButtonPressDialog(context, 'Google');
             },
           ),
-          Divider(),
+          const Divider(),
           SignInButton(
             Buttons.GoogleDark,
             onPressed: () {
               _showButtonPressDialog(context, 'Google (dark)');
             },
           ),
-          Divider(),
+          const Divider(),
           SignInButton(
             Buttons.FacebookNew,
             onPressed: () {
               _showButtonPressDialog(context, 'FacebookNew');
             },
           ),
-          Divider(),
+          const Divider(),
           SignInButton(
             Buttons.Apple,
             onPressed: () {
               _showButtonPressDialog(context, 'Apple');
             },
           ),
-          Divider(),
+          const Divider(),
           SignInButton(
             Buttons.GitHub,
-            text: "Sign up with GitHub",
+            text: 'Sign up with GitHub',
             onPressed: () {
               _showButtonPressDialog(context, 'Github');
             },
           ),
-          Divider(),
+          const Divider(),
           SignInButton(
             Buttons.Microsoft,
-            text: "Sign up with Microsoft ",
+            text: 'Sign up with Microsoft ',
             onPressed: () {
               _showButtonPressDialog(context, 'Microsoft ');
             },
           ),
-          Divider(),
+          const Divider(),
           SignInButton(
             Buttons.Twitter,
-            text: "Use Twitter",
+            text: 'Use Twitter',
             onPressed: () {
               _showButtonPressDialog(context, 'Twitter');
             },
           ),
-          Divider(),
+          const Divider(),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -125,7 +125,7 @@ class SignInPage extends StatelessWidget {
               ),
               SignInButtonBuilder(
                 icon: Icons.email,
-                text: "Ignored for mini button",
+                text: 'Ignored for mini button',
                 mini: true,
                 onPressed: () {
                   _showButtonPressDialog(context, 'Email (mini)');
