@@ -61,18 +61,24 @@ SignInButtonBuilder(
 
 ```dart
 enum Buttons {
-  Apple,
-  AppleDark,
   Email,
   Google,
   GoogleDark,
   Facebook,
   FacebookNew,
   GitHub,
+  Apple,
+  AppleDark,
   LinkedIn,
   Pinterest,
   Tumblr,
-  Twitter
+  Twitter,
+  Reddit,
+  Quora,
+  Yahoo,
+  Hotmail,
+  Xbox,
+  Microsoft,
 }
 ```
 
