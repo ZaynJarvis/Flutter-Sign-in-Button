@@ -18,4 +18,7 @@ enum Buttons {
   Hotmail,
   Xbox,
   Microsoft,
+  FireBasePhoneNumber,
 }
+
+// Added FireBasePhoneNumber by contato@juliofabio.com
