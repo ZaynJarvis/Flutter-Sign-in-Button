@@ -65,7 +65,7 @@ class SignInButton extends StatelessWidget {
               ? const Color.fromRGBO(0, 0, 0, 0.54)
               : const Color(0xFFFFFFFF),
           image: Container(
-            margin: const EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
+            margin: const EdgeInsets.fromLTRB(6.0, 0.0, 4.0, 0.0),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(8.0),
               child: Image(
