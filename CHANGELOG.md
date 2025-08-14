@@ -100,14 +100,14 @@
 - add some new buttons
 - fix default font in button builder issue
 
+## 2.0.0
+
+- Migrated package to null safety
+- use dart stable version >= 2.12.0
+
 ## 2.1.0
 
 - Improve code style and formatting
 - Add Claude Code GitHub Workflow integration
 - Update button view implementation
 - Various maintenance and bug fixes
-
-## 2.0.0
-
-- Migrated package to null safety
-- use dart stable version >= 2.12.0
