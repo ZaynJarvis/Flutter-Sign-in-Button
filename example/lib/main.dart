@@ -55,6 +55,15 @@ class SignInPage extends StatelessWidget {
           ),
           const Divider(),
           SignInButton(
+            Buttons.Facebook,
+            onPressed: () {
+              _showButtonPressDialog(context, 'Facebook (custom width)');
+            },
+            text: "This is a very long text that you can use",
+            width: 300.0,
+          ),
+          const Divider(),
+          SignInButton(
             Buttons.GoogleDark,
             onPressed: () {
               _showButtonPressDialog(context, 'Google (dark)');

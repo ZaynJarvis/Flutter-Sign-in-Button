@@ -71,7 +71,9 @@ class SignInButtonBuilder extends StatelessWidget {
     this.shape,
     this.height,
     this.width,
-  }) : super(key: key);
+  })  : assert(width == null || width > 0, 'Width must be positive'),
+        assert(height == null || height > 0, 'Height must be positive'),
+        super(key: key);
 
   /// The build function will be help user to build the signin button widget.
   @override
@@ -95,8 +97,8 @@ class SignInButtonBuilder extends StatelessWidget {
   Container _getButtonChild(BuildContext context) {
     if (mini) {
       return Container(
-        width: height ?? 35.0,
-        height: width ?? 35.0,
+        width: width ?? 35.0,
+        height: height ?? 35.0,
         child: _getIconOrImage(),
       );
     }
