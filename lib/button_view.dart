@@ -249,7 +249,7 @@ class SignInButton extends StatelessWidget {
           key: const ValueKey('Hotmail'),
           mini: mini,
           text: text ?? 'Sign in with Hotmail',
-          icon: FontAwesomeIcons.commentSms,
+          icon: FontAwesomeIcons.sms,
           backgroundColor: const Color(0x000072c6),
           onPressed: onPressed,
           padding: padding,
