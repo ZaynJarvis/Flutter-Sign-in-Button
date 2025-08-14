@@ -55,6 +55,23 @@ class SignInButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     switch (button) {
+      // Added FireBasePhoneNumber by contato@juliofabio.com
+
+      case Buttons.FireBasePhoneNumber:
+        return SignInButtonBuilder(
+          elevation: elevation,
+          key: const ValueKey('FireBasePhoneNumber'),
+          mini: mini,
+          text: text ?? 'Sign in with Phone #',
+          textColor: Colors.white,
+          icon: FontAwesomeIcons.phone,
+          iconColor: Colors.white,
+          backgroundColor: const Color(0xFF4285F4),
+          onPressed: onPressed,
+          padding: padding,
+          shape: shape,
+        );
+
       case Buttons.Google:
       case Buttons.GoogleDark:
         return SignInButtonBuilder(
