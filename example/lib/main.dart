@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   /// This is an example app which make use of
   /// `SignInButtonBuilder` and `SignInButton` class
   @override
@@ -11,8 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.light(),
-      home: Scaffold(
-        backgroundColor: const Color.fromRGBO(50, 50, 50, 1.0),
+      home: const Scaffold(
+        backgroundColor: Color.fromRGBO(50, 50, 50, 1.0),
         body: SignInPage(),
       ),
       debugShowCheckedModeBanner: false,
@@ -21,6 +23,8 @@ class MyApp extends StatelessWidget {
 }
 
 class SignInPage extends StatelessWidget {
+  const SignInPage({super.key});
+
   /// Show a simple "___ Button Pressed" indicator
   void _showButtonPressDialog(BuildContext context, String provider) {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(

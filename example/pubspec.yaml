@@ -1,22 +1,25 @@
 name: example
-description: A new Flutter project.
+description: "A new Flutter project."
+
+publish_to: 'none' 
+
 version: 1.0.0+1
 
-publish_to: none
-
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=3.4.3 <4.0.0'
 
 dependencies:
-  cupertino_icons: ^1.0.3
   flutter:
     sdk: flutter
   flutter_signin_button:
     path: ../
+  
+  cupertino_icons: ^1.0.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^3.0.0
 
-flutter:
+flutter:  
   uses-material-design: true
