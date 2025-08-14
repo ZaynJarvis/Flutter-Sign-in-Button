@@ -105,6 +105,11 @@
 - Migrated package to null safety
 - use dart stable version >= 2.12.0
 
+## 2.1.1
+
+- Fix SMS-related functionality
+- Minor bug fixes and improvements
+
 ## 2.1.0
 
 - Improve code style and formatting
