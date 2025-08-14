@@ -32,6 +32,9 @@ class SignInButton extends StatelessWidget {
   // overrides the default button elevation
   final double elevation;
 
+  /// overrides the default button width
+  final double? width;
+
   /// The constructor is fairly self-explanatory.
   const SignInButton(
     this.button, {
@@ -42,6 +45,7 @@ class SignInButton extends StatelessWidget {
     this.shape,
     this.text,
     this.elevation = 2.0,
+    this.width,
   })  : assert(
             mini != true ||
                 !(button == Buttons.Google ||
@@ -87,6 +91,7 @@ class SignInButton extends StatelessWidget {
           innerPadding: const EdgeInsets.all(0),
           shape: shape,
           height: 36.0,
+          width: width,
         );
       case Buttons.Facebook:
       case Buttons.FacebookNew:
@@ -116,6 +121,7 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          width: width,
         );
       case Buttons.GitHub:
         return SignInButtonBuilder(
@@ -128,6 +134,7 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          width: width,
         );
       case Buttons.Apple:
       case Buttons.AppleDark:
@@ -145,6 +152,7 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          width: width,
         );
       case Buttons.LinkedIn:
         return SignInButtonBuilder(
@@ -157,6 +165,7 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          width: width,
         );
       case Buttons.Pinterest:
         return SignInButtonBuilder(
@@ -169,6 +178,7 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          width: width,
         );
       case Buttons.Tumblr:
         return SignInButtonBuilder(
@@ -181,6 +191,7 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          width: width,
         );
       case Buttons.Twitter:
         return SignInButtonBuilder(
@@ -193,6 +204,7 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          width: width,
         );
       case Buttons.Reddit:
         return SignInButtonBuilder(
@@ -205,6 +217,7 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          width: width,
         );
       case Buttons.Quora:
         return SignInButtonBuilder(
@@ -216,6 +229,7 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          width: width,
         );
       case Buttons.Yahoo:
         return SignInButtonBuilder(
@@ -227,6 +241,7 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          width: width,
         );
       case Buttons.Hotmail:
         return SignInButtonBuilder(
@@ -238,6 +253,7 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          width: width,
         );
       case Buttons.Xbox:
         return SignInButtonBuilder(
@@ -249,6 +265,7 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          width: width,
         );
       case Buttons.Microsoft:
         return SignInButtonBuilder(
@@ -260,6 +277,7 @@ class SignInButton extends StatelessWidget {
           onPressed: onPressed,
           padding: padding,
           shape: shape,
+          width: width,
         );
       case Buttons.Email:
       default:
@@ -273,6 +291,7 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           backgroundColor: Colors.grey[700]!,
           shape: shape,
+          width: width,
         );
     }
   }
