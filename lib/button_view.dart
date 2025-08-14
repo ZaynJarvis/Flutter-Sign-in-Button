@@ -52,6 +52,7 @@ class SignInButton extends StatelessWidget {
                     button == Buttons.GoogleDark ||
                     button == Buttons.FacebookNew),
             'Google and FacebookNew buttons do not support mini mode'),
+        assert(width == null || width > 0, 'Width must be positive'),
         super(key: key);
 
   /// The build function is used to build the widget which will switch to
